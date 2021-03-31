@@ -1,0 +1,20 @@
+## Politicians
+
+For computational reasons, the topic model tool provides a selection of 270 out of the [`r nrow(politicians)` politicians](#politicians-table). This sample of politicians is drawn by a combination of three different approaches:
+
+1. Every minister and chancellor since the 14th electoral term (26.10.1998)
+2. Every opposition leader since 1949 based on this [Wikipedia list](https://de.wikipedia.org/wiki/Fraktionsvorsitzender).
+3. The 200 most followed politicians on twitter based in this [Twitter list](https://twitter.com/i/lists/912241909002833921).
+
+Additionally we dropped every politician with less than 30 speeches in the Open Discourse corpus.
+
+The final list of politicians can be found below (sorted by last name):
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+pols <- readr::read_csv("./data/topics/pol_selection.csv")
+
+pols %>% 
+  make_table(scrollable = TRUE)
+```
+

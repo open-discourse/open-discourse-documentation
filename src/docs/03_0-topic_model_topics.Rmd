@@ -1,0 +1,1165 @@
+# LDA Topic Model 
+
+This section provides additional information about the LDA topic model search tool on the [Open Discourse website](opendiscourse.de). 
+Currently this section is only available in English. 
+
+## Topics Documentation
+
+Here you can find an overview about each of the 73 topics available in the Open Discourse frontend. For each topic you can find a word cloud visualizing the top 100 words as well as a list of the top 100 most relevant words that belong to the topic.
+
+
+::::{.infobox .caution}
+
+**Notice!**
+
+> The word lists below are from the cleaned up corpus dictionary (stemmed, lemmatized). Therefor the words are in very basic short-forms so they can be applied to word inflections. 
+
+::::
+
+### Volkswirtschaft
+
+**Word Cloud:**
+
+![](images/topic_model/topic_0_Volkswirtschaft.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_0_Volkswirtschaft.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+### Bürger:innenrechte
+
+**Word Cloud:**
+
+![](images/topic_model/topic_1_Bürger:Innenrechte.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_1_Bürger:Innenrechte.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+### Gesundheitswesen
+
+**Word Cloud:**
+
+![](images/topic_model/topic_2_Gesundheitswesen.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_2_Gesundheitswesen.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Landwirtschaft
+
+**Word Cloud:**
+
+![](images/topic_model/topic_3_Landwirtschaft.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_3_Landwirtschaft.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Arbeit
+
+**Word Cloud:**
+
+![](images/topic_model/topic_4_Arbeit.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_4_Arbeit.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Bildung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_5_Bildung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_5_Bildung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Umwelt
+
+**Word Cloud:**
+
+![](images/topic_model/topic_6_Umwelt.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_6_Umwelt.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Energie
+
+**Word Cloud:**
+
+![](images/topic_model/topic_7_Energie.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_7_Energie.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Transport
+
+**Word Cloud:**
+
+![](images/topic_model/topic_8_Transport.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_8_Transport.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Recht & Kriminalität
+
+**Word Cloud:**
+
+![](images/topic_model/topic_9_Recht_Kriminalitaet.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_9_Recht_Kriminalität.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Sozialpolitik
+
+**Word Cloud:**
+
+![](images/topic_model/topic_10_Sozialpolitik.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_10_Sozialpolitik.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Wohnungswesen
+
+**Word Cloud:**
+
+![](images/topic_model/topic_11_Wohnungswesen.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_11_Wohnungswesen.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Binnenhandel
+
+**Word Cloud:**
+
+![](images/topic_model/topic_12_Binnenhandel.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_12_Binnenhandel.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Verteidigungspolitik
+
+**Word Cloud:**
+
+![](images/topic_model/topic_13_Verteidigungspolitik.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_13_Verteidigungspolitik.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Technologie
+
+**Word Cloud:**
+
+![](images/topic_model/topic_14_Technologie.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_14_Technologie.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Außenhandel
+
+**Word Cloud:**
+
+![](images/topic_model/topic_15_Außenhandel.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_15_Außenhandel.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Außenpolitik
+
+**Word Cloud:**
+
+![](images/topic_model/topic_16_Außenpolitik.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_16_Außenpolitik.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Öffentliche Verwaltung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_17_Öffentliche Verwaltung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_17_Öffentliche Verwaltung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Sport
+
+**Word Cloud:**
+
+![](images/topic_model/topic_18_Sport.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_18_Sport.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Wiedervereinigung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_19_Wiedervereinigung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_19_Wiedervereinigung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Volkswirtschaft: Steuern
+
+**Word Cloud:**
+
+![](images/topic_model/topic_20_Volkswirtschaft: Steuern.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_20_Volkswirtschaft: Steuern.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Volkswirtschaft: Haushalt
+
+**Word Cloud:**
+
+![](images/topic_model/topic_21_Volkswirtschaft: Haushalt.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_21_Volkswirtschaft: Haushalt.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Bürger:innenrechte: Gleichstellung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_22_Bürger:Innenrechte: Gleichstellung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_22_Bürger:Innenrechte: Gleichstellung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Bürger:innenrechte: Datenschutz
+
+**Word Cloud:**
+
+![](images/topic_model/topic_23_Bürger:Innenrechte: Datenschutz.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_23_Bürger:Innenrechte: Datenschutz.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Bürger:innenrechte: Flucht, Asyl & Einbürgerung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_24_Bürger:Innenrechte: Flucht, Asyl_Einbürgerung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_24_Bürger:Innenrechte: Flucht, Asyl_Einbürgerung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Gesundheitswesen: Covid19
+
+**Word Cloud:**
+
+![](images/topic_model/topic_25_Gesundheitswesen: Covid19.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_25_Gesundheitswesen: Covid19.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Landwirtschaft: Nahrungsmittel
+
+**Word Cloud:**
+
+![](images/topic_model/topic_26_Landwirtschaft: Nahrungsmittel.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_26_Landwirtschaft: Nahrungsmittel.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Landwirtschaft: Tierschutz
+
+**Word Cloud:**
+
+![](images/topic_model/topic_27_Landwirtschaft: Tierschutz.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_27_Landwirtschaft: Tierschutz.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Arbeit: Arbeitnehmer:innenrechte
+
+**Word Cloud:**
+
+![](images/topic_model/topic_28_Arbeit: Arbeitnehmer:Innenrechte.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_28_Arbeit: Arbeitnehmer:Innenrechte.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Arbeit: Mindestlohn
+
+**Word Cloud:**
+
+![](images/topic_model/topic_29_Arbeit: Mindestlohn.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_29_Arbeit: Mindestlohn.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Arbeit: Leih- & Zeitarbeit
+
+**Word Cloud:**
+
+![](images/topic_model/topic_30_Arbeit: Leih-_Zeitarbeit.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_30_Arbeit: Leih-_Zeitarbeit.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Bildung: Hochschule & Universität
+
+**Word Cloud:**
+
+![](images/topic_model/topic_31_Bildung: Hochschule_Unversität.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_31_Bildung: Hochschule_Unversität.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Bildung: Schule
+
+**Word Cloud:**
+
+![](images/topic_model/topic_32_Bildung: Schule.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_32_Bildung: Schule.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Bildung: Berufliche Ausbildung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_33_Bildung: Berufliche Ausbildung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_33_Bildung: Berufliche Ausbildung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Bildung: Forschung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_34_Bildung: Forschung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_34_Bildung: Forschung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Umwelt: Atommüll & Chemische Giftstoff
+
+**Word Cloud:**
+
+![](images/topic_model/topic_35_Umwelt: Atommüll_Chemische Giftstoffe.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_35_Umwelt: Atommüll_Chemische Giftstoffe.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Umwelt: Dieselskandal
+
+**Word Cloud:**
+
+![](images/topic_model/topic_36_Umwelt: Dieselskandal.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_36_Umwelt: Dieselskandal.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Umwelt: Klima- & Umweltschutz
+
+**Word Cloud:**
+
+![](images/topic_model/topic_37_Umwelt: Klima-_Umweltschutz.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_37_Umwelt: Klima-_Umweltschutz.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Energie: Kernenergie
+
+**Word Cloud:**
+
+![](images/topic_model/topic_38_Energie: Kernenergie.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_38_Energie: Kernenergie.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Energie: Fossile Energie
+
+**Word Cloud:**
+
+![](images/topic_model/topic_39_Energie: Fossile Energie.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_39_Energie: Fossile Energie.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Energie: Erneuerbare Energie
+
+**Word Cloud:**
+
+![](images/topic_model/topic_40_Energie: Erneuerbare Energie.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_40_Energie: Erneuerbare Energie.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Transport: Automobil & Straßenverkehr
+
+**Word Cloud:**
+
+![](images/topic_model/topic_41_Transport: Automobil_Straßenverkehr.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_41_Transport: Automobil_Straßenverkehr.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Transport: Flug
+
+**Word Cloud:**
+
+![](images/topic_model/topic_42_Transport: Flug.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_42_Transport: Flug.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Transport: Bahn
+
+**Word Cloud:**
+
+![](images/topic_model/topic_43_Transport: Bahn.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_43_Transport: Bahn.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+
+
+### Transport: Schifffahrt
+
+**Word Cloud:**
+
+![](images/topic_model/topic_44_Transport: Schifffahrt.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_44_Transport: Schifffahrt.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Recht & Kriminalitä: Polizei & Grenzschutz
+
+**Word Cloud:**
+
+![](images/topic_model/topic_45_Recht_Kriminalität: Polizei_Grenzschutz.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_45_Recht_Kriminalität: Polizei_Grenzschutz.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Recht & Kriminalität: Drogenpolitik
+
+**Word Cloud:**
+
+![](images/topic_model/topic_46_Recht_Kriminalität: Drogenpolitik .png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_46_Recht_Kriminalität: Drogenpolitik .csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Recht & Kriminalität: Familienangelegenheiten
+
+**Word Cloud:**
+
+![](images/topic_model/topic_47_Recht_Kriminalität: Familienangelegenheiten .png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_47_Recht_Kriminalität: Familienangelegenheiten .csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+### Recht & Kriminalität: Zivil und Strafrecht
+
+**Word Cloud:**
+
+![](images/topic_model/topic_48_Recht_Kriminalität: Zivil und Strafrecht.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_48_Recht_Kriminalität: Zivil und Strafrecht.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Recht & Kriminalität: Sexualstrafrecht
+
+**Word Cloud:**
+
+![](images/topic_model/topic_49_Recht_Kriminalität: Sexualstrafrecht .png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_49_Recht_Kriminalität: Sexualstrafrecht .csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Recht & Kriminalität: Innerdeutscher Terrorismus
+
+**Word Cloud:**
+
+![](images/topic_model/topic_50_Recht_Kriminalität: Innerdeutscher Terrorismus.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_50_Recht_Kriminalität: Innerdeutscher Terrorismus.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Recht & Kriminalität: Wirtschaftskriminalität
+
+**Word Cloud:**
+
+![](images/topic_model/topic_51_Recht_Kriminalität: Wirtschaftskriminalität.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_51_Recht_Kriminalität: Wirtschaftskriminalität.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Sozialpolitik: Renten
+
+**Word Cloud:**
+
+![](images/topic_model/topic_52_Sozialpolitik: Renten.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_52_Sozialpolitik: Renten.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Sozialpolitik: Geringverdiener
+
+**Word Cloud:**
+
+![](images/topic_model/topic_53_Sozialpolitik: Geringverdiener.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_53_Sozialpolitik: Geringverdiener.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Sozialpolitik: Kinder & Jugenhilfe
+
+**Word Cloud:**
+
+![](images/topic_model/topic_54_Sozialpolitik: Kindergeld_Jugendhilfe.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_54_Sozialpolitik: Kindergeld_Jugendhilfe.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Sozialpolitik: Bürger:innenversicherunng
+
+**Word Cloud:**
+
+![](images/topic_model/topic_55_Sozialpolitik: Bürger:Innenversicherung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_55_Sozialpolitik: Bürger:Innenversicherung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+
+
+
+### Binnenhandel: Verbraucherschutz
+
+**Word Cloud:**
+
+![](images/topic_model/topic_56_Binnenhandel: Verbraucherschutz.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_56_Binnenhandel: Verbraucherschutz.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Binnenhandel: Mittelstand
+
+**Word Cloud:**
+
+![](images/topic_model/topic_57_Binnenhandel: Mittelstand.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_57_Binnenhandel: Mittelstand.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Verteidigungspolitik: Nachkriegsordnung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_58_Verteidigungspolitik: Nachkriegsordnung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_58_Verteidigungspolitik: Nachkriegsordnung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Verteidigungspolitik: Rüstungskontrolle
+
+**Word Cloud:**
+
+![](images/topic_model/topic_59_Verteidigungspolitik: Rüstungskontrolle .png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_59_Verteidigungspolitik: Rüstungskontrolle .csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Verteidigungspolitik: Militärische Unterstützung und Waffenlieferung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_60_Verteidigungspolitik: Militärische Unterstützung und Waffenlieferung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_60_Verteidigungspolitik: Militärische Unterstützung und Waffenlieferung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Technologie: Digitalisierung
+
+**Word Cloud:**
+
+![](images/topic_model/topic_61_Technologie: Digitalisierung.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_61_Technologie: Digitalisierung.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Technologie: Rundfunk
+
+**Word Cloud:**
+
+![](images/topic_model/topic_62_Technologie: Rundfunk.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_62_Technologie: Rundfunk.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Außenhandel: Globalisierung & Weltwirtschaft
+
+**Word Cloud:**
+
+![](images/topic_model/topic_63_Außenhandel: Globalisierung_Weltwirtschaft.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_63_Außenhandel: Globalisierung_Weltwirtschaft.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Außenhandel: Handelsabkommen
+
+**Word Cloud:**
+
+![](images/topic_model/topic_64_Außenhandel: Handelsabkommen.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_64_Außenhandel: Handelsabkommen.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Außenpolitik: Entwicklungspolitik
+
+**Word Cloud:**
+
+![](images/topic_model/topic_65_Außenpolitik: Entwicklungspolitik.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_65_Außenpolitik: Entwicklungspolitik.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Außenpolitik: Europa
+
+**Word Cloud:**
+
+![](images/topic_model/topic_66_Außenpolitik: Europa.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_66_Außenpolitik: Europa.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Außenpolitik: Naher Osten
+
+**Word Cloud:**
+
+![](images/topic_model/topic_67_Außenpolitik: Naher Osten.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_67_Außenpolitik: Naher Osten.csv")
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Außenpolitik: Ost-West Konflikt
+
+**Word Cloud:**
+
+![](images/topic_model/topic_68_Außenpolitik: Ost-West Konflikt.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_68_Außenpolitik: Ost-West Konflikt.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Öffentliche Verwaltun: Föderalismus
+
+**Word Cloud:**
+
+![](images/topic_model/topic_69_Öffentliche Verwaltung: Föderalismus.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_69_Öffentliche Verwaltung: Föderalismus.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+### Öffentliche Verwaltun: Post
+
+**Word Cloud:**
+
+![](images/topic_model/topic_70_Öffentliche Verwaltung: Post.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_70_Öffentliche Verwaltung: Post.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+
+### Öffentliche Verwaltun: Soziale Leistungen für Angestellte im öffentlichen Dienst
+
+**Word Cloud:**
+
+![](images/topic_model/topic_71_Öffentliche Verwaltung: Soziale Leistungen für Angestellte im öffentlichen Dienst.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_71_Öffentliche Verwaltung: Soziale Leistungen für Angestellte im öffentlichen Dienst.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+### Öffentliche Verwaltun: Korruption & Lobbyismus
+
+**Word Cloud:**
+
+![](images/topic_model/topic_72_Öffentliche Verwaltung: Korruption_Lobbyismus.png)
+
+**Word Table:**
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+first_topic <- read_csv("./data/topics/topic_72_Öffentliche Verwaltung: Korruption_Lobbyismus.csv")
+
+first_topic %>%
+  make_table(scrollable = TRUE)
+```
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,262 @@
+politicianId,name_str,latest_pos
+11000009,Konrad Adenauer (CDU/CSU),CDU/CSU
+11000093,Sabine Bard (Grüne),Grüne
+11000102,Rainer Barzel (CDU/CSU),CDU/CSU
+11000130,Max Becker (FDP),FDP
+11000234,Annemarie Borgmann (Grüne),Grüne
+11000246,Willy Brandt (SPD),SPD
+11000263,Heinrich Brentano (CDU/CSU),CDU/CSU
+11000305,Edelgard Bulmahn (SPD),SPD
+11000321,Karl Carstens (CDU/CSU),CDU/CSU
+11000347,Herta Däubler-Gmelin (SPD),SPD
+11000364,Thomas Dehler (FDP),FDP
+11000365,Jörg Diether Dehm-Desoi (DIE LINKE.),DIE LINKE.
+11000418,Alfred Dregger (CDU/CSU),CDU/CSU
+11000486,Ludwig Erhard (CDU/CSU),CDU/CSU
+11000488,Fritz Erler (SPD),SPD
+11000552,Joschka Fischer (Grüne),Grüne
+11000691,Michael Glos (CDU/CSU),CDU/CSU
+11000756,Gregor Gysi (DIE LINKE.),DIE LINKE.
+11000924,Hannegret Hönes (Grüne),Grüne
+11000952,Birgit Homburger (FDP),FDP
+11000964,Willi Hoss (Grüne),Grüne
+11001023,Ulla Jelpke (DIE LINKE.),DIE LINKE.
+11001074,Volker Kauder (CDU/CSU),CDU/CSU
+11001081,Petra Karin Kelly (Grüne),Grüne
+11001096,Kurt Georg Kiesinger (CDU/CSU),CDU/CSU
+11001136,Hans Ulrich Klose (SPD),SPD
+11001165,Helmut Kohl (CDU/CSU),CDU/CSU
+11001225,Heinrich Krone (CDU/CSU),CDU/CSU
+11001336,Sabine Leutheusser-Schnarrenberger (FDP),FDP
+11001352,Helmut Lippelt (Grüne),Grüne
+11001478,Angela Merkel (CDU/CSU),CDU/CSU
+11001512,Wolfgang Mischnick (FDP),FDP
+11001570,Franz Müntefering (SPD),SPD
+11001637,Jutta Oesterle-Schwerin (Grüne),Grüne
+11001646,Erich Ollenhauer (SPD),SPD
+11001772,Peter Ramsauer (CDU/CSU),CDU/CSU
+11001933,Hermann Schäfer (FDP),FDP
+11001938,Wolfgang Schäuble (CDU/CSU),CDU/CSU
+11002003,Christian Schmidt (CDU/CSU),CDU/CSU
+11002007,Helmut Schmidt (SPD),SPD
+11002016,Renate Schmidt (SPD),SPD
+11002019,Ulla Schmidt (SPD),SPD
+11002065,Waltraud Schoppe (Grüne),Grüne
+11002078,Gerhard Schröder (SPD),SPD
+11002140,Horst Seehofer (CDU/CSU),CDU/CSU
+11002190,Hermann Otto Solms (FDP),FDP
+11002365,Christa Vennegerts (Grüne),Grüne
+11002379,Hans Jochen Vogel (SPD),SPD
+11002391,Antje Vollmer (Grüne),Grüne
+11002393,Ludger Volmer (Grüne),Grüne
+11002444,Herbert Wehner (SPD),SPD
+11002503,Heidemarie Wieczorek-Zeul (SPD),SPD
+11002617,Peter Altmaier (CDU/CSU),CDU/CSU
+11002624,Marieluise Beck-Oberdorf (Grüne),Grüne
+11002652,Andrea Fischer (Grüne),Grüne
+11002659,Wolfgang Gerhardt (FDP),FDP
+11002666,Hermann Gröhe (CDU/CSU),CDU/CSU
+11002672,Barbara Hendricks (SPD),SPD
+11002715,Oskar Lafontaine (DIE LINKE.),DIE LINKE.
+11002720,Steffi Lemke (Grüne),Grüne
+11002735,Friedrich Merz (CDU/CSU),CDU/CSU
+11002742,Gerd Müller (CDU/CSU),CDU/CSU
+11002746,Cem Özdemir (Grüne),Grüne
+11002765,Norbert Röttgen (CDU/CSU),CDU/CSU
+11002769,Rudolf Scharping (SPD),SPD
+11002823,Ute Vogt (SPD),SPD
+11002944,Guido Westerwelle (FDP),FDP
+11003028,Ilse Aigner (CDU/CSU),CDU/CSU
+11003034,Dietmar Bartsch (DIE LINKE.),DIE LINKE.
+11003050,Lothar Binding (SPD),SPD
+11003051,Kurt Bodewig (SPD),SPD
+11003059,Rainer Brüderle (FDP),FDP
+11003065,Roland Claus (DIE LINKE.),DIE LINKE.
+11003068,Ekin Deligöz (Grüne),Grüne
+11003124,Hans Peter Friedrich (CDU/CSU),CDU/CSU
+11003132,Katrin Dagmar Göring-Eckardt (Grüne),Grüne
+11003142,Hubertus Heil (SPD),SPD
+11003167,Christine Lambrecht (SPD),SPD
+11003168,Christian Lange (SPD),SPD
+11003196,Andrea Nahles (SPD),SPD
+11003198,Dirk Niebel (FDP),FDP
+11003213,Michael Roth (SPD),SPD
+11003218,Carsten Schneider (SPD),SPD
+11003231,Olaf Scholz (SPD),SPD
+11003246,Jürgen Trittin (Grüne),Grüne
+11003259,Annette Widmann-Mauz (CDU/CSU),CDU/CSU
+11003440,Kerstin Griese (SPD),SPD
+11003493,Kerstin Andreae (Grüne),Grüne
+11003495,Daniel Bahr (FDP),FDP
+11003496,Sören Bartol (SPD),SPD
+11003510,Helge Braun (CDU/CSU),CDU/CSU
+11003516,Alexander Dobrindt (CDU/CSU),CDU/CSU
+11003522,Hans Eichel (SPD),SPD
+11003530,Otto Fricke (FDP),FDP
+11003541,Michael Grosse-Brömer (CDU/CSU),CDU/CSU
+11003543,Karl Theodor Guttenberg (CDU/CSU),CDU/CSU
+11003566,Julia Klöckner (CDU/CSU),CDU/CSU
+11003569,Kristina Köhler (CDU/CSU),CDU/CSU
+11003576,Renate Künast (Grüne),Grüne
+11003586,Dorothee Mantel (CDU/CSU),CDU/CSU
+11003588,Hilde Mattheis (SPD),SPD
+11003597,Stefan Müller (CDU/CSU),CDU/CSU
+11003599,Rolf Mützenich (SPD),SPD
+11003612,Florian Pronold (SPD),SPD
+11003613,Daniela Raab (CDU/CSU),CDU/CSU
+11003616,Walter Riester (SPD),SPD
+11003625,Andreas Scheuer (CDU/CSU),CDU/CSU
+11003631,Uwe Schummer (CDU/CSU),CDU/CSU
+11003638,Jens Spahn (CDU/CSU),CDU/CSU
+11003655,Marco Wanderwitz (CDU/CSU),CDU/CSU
+11003710,Bärbel Kofler (SPD),SPD
+11003714,Monika Lazar (Grüne),Grüne
+11003715,Lars Klingbeil (SPD),SPD
+11003732,Niels Annen (SPD),SPD
+11003734,Thomas Bareiß (CDU/CSU),CDU/CSU
+11003746,Sevim Dağdelen (DIE LINKE.),DIE LINKE.
+11003753,Klaus Ernst (DIE LINKE.),DIE LINKE.
+11003755,Sigmar Gabriel (SPD),SPD
+11003756,Kai Gehring (Grüne),Grüne
+11003763,Heike Hänsel (DIE LINKE.),DIE LINKE.
+11003764,Britta Haßelmann (Grüne),Grüne
+11003772,Anton Hofreiter (Grüne),Grüne
+11003781,Franz Josef Jung (CDU/CSU),CDU/CSU
+11003786,Katja Kipping (DIE LINKE.),DIE LINKE.
+11003790,Jan Korte (DIE LINKE.),DIE LINKE.
+11003792,Sylvia Kotting-Uhl (Grüne),Grüne
+11003797,Karl Lauterbach (SPD),SPD
+11003820,Thomas Oppermann (SPD),SPD
+11003830,Sönke Rix (SPD),SPD
+11003834,Frank Schäffler (FDP),FDP
+11003836,Annette Schavan (CDU/CSU),CDU/CSU
+11003846,Frank Schwabe (SPD),SPD
+11003848,Petra Sitte (DIE LINKE.),DIE LINKE.
+11003856,Florian Toncar (FDP),FDP
+11003860,Kai Wegner (CDU/CSU),CDU/CSU
+11003870,Brigitte Zypries (SPD),SPD
+11003881,Omid Nouripour (Grüne),Grüne
+11003888,Wolfgang Strengmann-Kuhn (Grüne),Grüne
+11003889,Manuel Sarrazin (Grüne),Grüne
+11003890,Christian Hirte (CDU/CSU),CDU/CSU
+11004006,Bärbel Bas (SPD),SPD
+11004011,Steffen Bilger (CDU/CSU),CDU/CSU
+11004012,Matthias W. Birkwald (DIE LINKE.),DIE LINKE.
+11004021,Ralph Brinkhaus (CDU/CSU),CDU/CSU
+11004022,Christine Buchholz (DIE LINKE.),DIE LINKE.
+11004023,Marco Buschmann (FDP),FDP
+11004029,Bijan Djir-Sarai (FDP),FDP
+11004030,Katja Dörner (Grüne),Grüne
+11004041,Nicole Gohlke (DIE LINKE.),DIE LINKE.
+11004048,Florian Hahn (CDU/CSU),CDU/CSU
+11004050,Jürgen Hardt (CDU/CSU),CDU/CSU
+11004057,Manuel Höferlin (FDP),FDP
+11004060,Andrej Hunko (DIE LINKE.),DIE LINKE.
+11004061,Thomas Jarzombek (CDU/CSU),CDU/CSU
+11004065,Stefan Kaufmann (CDU/CSU),CDU/CSU
+11004068,Roderich Kiesewetter (CDU/CSU),CDU/CSU
+11004070,Sven Christian Kindler (Grüne),Grüne
+11004072,Maria Klein-Schmeink (Grüne),Grüne
+11004079,Daniela Kolbe (SPD),SPD
+11004081,Oliver Krischer (Grüne),Grüne
+11004085,Stephan Kühn (Grüne),Grüne
+11004088,Caren Lay (DIE LINKE.),DIE LINKE.
+11004089,Sabine Leidig (DIE LINKE.),DIE LINKE.
+11004092,Ursula Leyen (CDU/CSU),CDU/CSU
+11004093,Stefan Liebich (DIE LINKE.),DIE LINKE.
+11004097,Christian Lindner (FDP),FDP
+11004100,Jan Marco Luczak (CDU/CSU),CDU/CSU
+11004102,Oliver Luksic (FDP),FDP
+11004106,Agnes Malczak (Grüne),Grüne
+11004111,Cornelia Möhring (DIE LINKE.),DIE LINKE.
+11004114,Niema Movassat (DIE LINKE.),DIE LINKE.
+11004116,Nadine Müller (CDU/CSU),CDU/CSU
+11004117,Beate Müller-Gemmeke (Grüne),Grüne
+11004123,Konstantin Notz (Grüne),Grüne
+11004127,Lisa Paus (Grüne),Grüne
+11004138,Tabea Rößner (Grüne),Grüne
+11004139,Erwin Rüddel (CDU/CSU),CDU/CSU
+11004143,Tankred Schipanski (CDU/CSU),CDU/CSU
+11004146,Patrick Schnieder (CDU/CSU),CDU/CSU
+11004165,Peer Steinbrück (SPD),SPD
+11004167,Frank Walter Steinmeier (SPD),SPD
+11004174,Peter Tauber (CDU/CSU),CDU/CSU
+11004176,Wolfgang Tiefensee (SPD),SPD
+11004179,Johannes Vogel (FDP),FDP
+11004183,Sahra Wagenknecht (DIE LINKE.),DIE LINKE.
+11004215,Harald Ebner (Grüne),Grüne
+11004217,Tobias Lindner (Grüne),Grüne
+11004245,Annalena Baerbock (Grüne),Grüne
+11004247,Katarina Barley (SPD),SPD
+11004255,Franziska Brantner (Grüne),Grüne
+11004257,Lars Castellucci (SPD),SPD
+11004259,Karamba Diaby (SPD),SPD
+11004263,Katharina Dröge (Grüne),Grüne
+11004267,Saskia Esken (SPD),SPD
+11004272,Fritz Felgentreu (SPD),SPD
+11004278,Matthias Gastel (Grüne),Grüne
+11004291,Sebastian Hartmann (SPD),SPD
+11004292,Matthias Hauer (CDU/CSU),CDU/CSU
+11004302,Heribert Hirte (CDU/CSU),CDU/CSU
+11004303,Thomas Hitschler (SPD),SPD
+11004312,Dieter Janecek (Grüne),Grüne
+11004323,Anja Karliczek (CDU/CSU),CDU/CSU
+11004328,Cansel Kiziltepe (SPD),SPD
+11004337,Katja Leikert (CDU/CSU),CDU/CSU
+11004339,Andreas Lenz (CDU/CSU),CDU/CSU
+11004353,Irene Mihalic (Grüne),Grüne
+11004361,Alexander S. Neu (DIE LINKE.),DIE LINKE.
+11004362,Andreas Nick (CDU/CSU),CDU/CSU
+11004363,Ulli Nissen (SPD),SPD
+11004385,Martina Renner (DIE LINKE.),DIE LINKE.
+11004395,Ulle Schauws (Grüne),Grüne
+11004398,Jana Schimke (CDU/CSU),CDU/CSU
+11004405,Kordula Schulz-Asche (Grüne),Grüne
+11004426,Carsten Träger (SPD),SPD
+11004429,Julia Verlinden (Grüne),Grüne
+11004443,Kai Whittaker (CDU/CSU),CDU/CSU
+11004603,Jens Zimmermann (SPD),SPD
+11004656,Philipp Amthor (CDU/CSU),CDU/CSU
+11004659,Lisa Badum (Grüne),Grüne
+11004665,Canan Bayram (Grüne),Grüne
+11004672,Lorenz Gösta Beutin (DIE LINKE.),DIE LINKE.
+11004678,Stephan Brandner (AfD),AfD
+11004692,Petr Bystron (AfD),AfD
+11004695,Tino Chrupalla (AfD),AfD
+11004698,Gottfried Curio (AfD),AfD
+11004703,Anke Domscheit-Berg (DIE LINKE.),DIE LINKE.
+11004705,Christian Dürr (FDP),FDP
+11004716,Daniel Föst (FDP),FDP
+11004722,Götz Frömming (AfD),AfD
+11004724,Alexander Gauland (AfD),AfD
+11004731,Kay Gottschalk (AfD),AfD
+11004749,Martin Hess (AfD),AfD
+11004761,Leif Erik Holm (AfD),AfD
+11004786,Lukas Köhler (FDP),FDP
+11004796,Konstantin Kuhle (FDP),FDP
+11004798,Alexander Lambsdorff (FDP),FDP
+11004801,Sven Lehmann (Grüne),Grüne
+11004802,Helge Lindh (SPD),SPD
+11004811,Jens Maier (AfD),AfD
+11004817,Fabio De Masi (DIE LINKE.),DIE LINKE.
+11004823,Amira Mohamed Ali (DIE LINKE.),DIE LINKE.
+11004857,Filiz Polat (Grüne),Grüne
+11004858,Stephan Protschka (AfD),AfD
+11004859,Martin Reichardt (AfD),AfD
+11004869,Thomas Sattelberger (FDP),FDP
+11004905,Beatrix Storch (AfD),AfD
+11004906,Marie Agnes Strack-Zimmermann (FDP),FDP
+11004908,Benjamin Strasser (FDP),FDP
+11004910,Katja Suding (FDP),FDP
+11004913,Linda Teuteberg (FDP),FDP
+11004914,Michael Theurer (FDP),FDP
+11004941,Gyde Jensen (FDP),FDP
+11000500,"August Martin Euler (FDP, DA, FVP, DP)",DP
+11001242,"Knut Kühlmann-Stumm (FDP, CDU/CSU)",CDU/CSU
+11001467,"Erich Mende (FDP, CDU/CSU)",CDU/CSU
+11001970,"Otto Schily (Grüne, SPD)",SPD
+11002248,Ludwig Stiegler (SPD),SPD
+11002278,Peter Struck (SPD),SPD
+11003206,"Petra Pau (DIE LINKE., Fraktionslos)",DIE LINKE.
+11003512,"Marco Bülow (SPD, Fraktionslos)",Fraktionslos
+11003584,"Gesine Lötzsch (Fraktionslos, DIE LINKE.)",DIE LINKE.

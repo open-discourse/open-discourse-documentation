@@ -1,0 +1,302 @@
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+# Data Report of the Database
+
+This data report serves the purpose of documenting the variables and their linkages of the Open Discourse corpus. This report is supplementary to a soon to be published data paper.
+
+The Open Discourse Corpus consists of five main tables. This report provides information about the contents of these tables and the meaning of the respective variables. A detailed documentation about the procedures used to provide this corpus can be found in aforementioned data paper soon.
+
+Furthermore the codebase developed and used to create the corpus can be retrieved from [GitHub](https://github.com/open-discourse/open-discourse). This open source codebase can be used to recreate the database from scratch and to contribute to the repository to further improve the quality of the data.
+
+A current data dump can be found at the associated [Dataverse](https://dataverse.harvard.edu/dataverse/opendiscourse). Also, a full text search engine for researching the corpus can be found on the [Open Discourse Website](www.opendiscourse.de) (currently only available in German).
+
+
+## Database Schema
+
+![](.temp/db_schema.png)
+
+::: {.infobox .caution}
+**NOTICE!**
+
+The `text_position` variables in `contributions_extended` and `contributions_simplified` are positional identifiers. These identifiers link the contribution to their exact location inside the `speechContent` variable. Hence the `text_position` variable can be used to reassemble the original speech with all interjections that happened during the speech.
+:::
+
+------------------------------------------------------------------------
+
+## Speeches Table
+
+This table contains the speeches held in the parliament along with meta information and foreign keys.
+
+
+<details>
+  <summary> *Click here for a table preview*</summary>
+
+::: {.tablebox}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+speeches %>%
+  select(-c(firstName, lastName, searchSpeechContent)) %>% 
+  filter(electoralTerm == 1) %>% 
+  slice(1:10) %>% 
+  arrange(id) %>% 
+  mutate(speechContent = "[Content of speech is hidden in this preview table]") %>% 
+  make_table(scrollable = TRUE)
+```
+
+*this preview depicts the first 10 rows of the speeches table. The speech content is not included in this preview.*
+:::
+</details>
+<br>
+
+The speeches table has the following dimensions:
+
+```{r}
+read_csv("../.temp/speeches_dim.csv") %>% 
+  make_table()
+```
+
+### Speeches summary table
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+read_csv("../.temp/speeches_sum.csv") %>% 
+  make_table()
+```
+
+### Additional Remarks
+
+#### Position Variables
+
+ 
+
+The position variables (`positionShort` & `positionLong`) provide information about the function of the speaker. It is divided into a short, generic form and a long form. The `positionLong` variable is the exact extraction of the functional description of the speaker as can be found in the original protocol. The `positionShort` variable is a factor variable of seven different levels. The list below provides more information about the meaning of the seven levels.
+
+ 
+
+***Short Position Mapping:***
+
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| *positionShort*         | Description                                                                                                                                                                             |
++:========================+:========================================================================================================================================================================================+
+| Chancellor              | The federal chancellor of the Federal Republic of Germany.                                                                                                                              |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Guest                   | Every speaker that does not belong to the other `positionShort` levels and thus is an external person.                                                                                  |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Member of Parliament    | Every speaker that is mentioned alongside a faction abbreviation is considered a MP.                                                                                                    |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Minister                | Every speaker that has the function of a minister of state.                                                                                                               |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Not Found               | No `positionShort` information could be retrieved from the protocol.                                                                                                                    |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Presidium of Parliament | This category contains all speeches held by the (Vice-)Presidents of the Bundestag, the Father/Mother of the House ("Alterspräsident_in"), as well as secretaries ("Schriftführer_in"). |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Secretary of State      | This category contains both the permanent secretaries (beamtete Staatssekretär_in) as well as secretaries of state (parlamentarische Staatssekretär_in).                                |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+#### Speech Content Variable
+::: {.infobox .caution}
+**NOTICE!**
+The speech content variable only contains the actual spoken words of the respective politician. Any kind of interjection or reaction from the plenum is deleted from the speech content variable and replaced by a positional ID in the format of `({ID})`. This positional ID can be used to link each speech with every contribution during the speech. The contributions can be found in the two [Contributions Tables]. Furthermore the positional ID represents the exact order and position a contribution occurred and hence can be used to reassemble the original structure of the speeches and interjections/contributions.
+:::
+
+------------------------------------------------------------------------
+
+## Factions Table
+
+This table contains every faction and parliamentary group that was represented in the Bundestag since 1949.
+
+<details>
+ <summary>Click here for a table preview</summary>
+ 
+::: {.tablebox}
+```{r}
+factions %>% 
+  slice(1:10) %>% 
+  make_table(scrollable = TRUE)
+```
+*this preview depicts the first 10 rows of the factions table.*
+:::
+</details>
+<br>
+
+The factions table has the following dimensions:
+
+```{r}
+read_csv("../.temp/factions_dim.csv") %>% 
+  make_table()
+```
+
+### Factions summary table
+
+```{r}
+read_csv("../.temp/factions_sum.csv") %>% 
+  make_table()
+
+```
+
+### Additional Remarks
+
+All factions are drawn from the base data of the MPs ([Stammdaten aller Abgeordneten seit 1949](https://www.bundestag.de/services/opendata)). Additionally, every faction that is mentioned in the protocols but was not present in the base data of the MPs is added. Since we do not only include factions that appear in the protocols, some of the faction IDs in the factions table never occur in the speeches table.
+
+------------------------------------------------------------------------
+
+## Politicians Table
+
+This table contains information about every politician that was a member of parliament or member of the government since 1949.
+
+<details>
+ <summary>Click here for a table preview</summary>
+ 
+::: {.tablebox}
+```{r}
+politicians %>% 
+  slice(1:10) %>% 
+  make_table(scrollable = TRUE)
+```
+*this preview depicts the first 10 rows of the politicians table.*
+:::
+</details>
+<br>
+
+The politicians table has the following dimensions:
+
+```{r, echo=FALSE}
+read_csv("../.temp/pol_dim.csv") %>% 
+  make_table()
+```
+
+
+### Politicians summary table
+
+```{r}
+read_csv("../.temp/pol_sum.csv") %>% 
+  make_table()
+```
+
+### Additional Remarks
+
+All meta information about the politicians is directly drawn from the base data of the MPs. The Open Discourse corpus only contains a selection of the publicly available personal details of the politicians. A comprehensive resource of the available meta data can be found on the [website of the Bundestag](https://www.bundestag.de/services/opendata). There are some rare cases in which people were members of the government but never held a mandate as a member of the parliament. These politicians are not covered in the base data mentioned above. To fill this gap in the base data, we merge the file with data retrieved from [Wikipedia](https://de.wikipedia.org/wiki/Liste_der_deutschen_Regierungsmitglieder_seit_1949).
+
+------------------------------------------------------------------------
+
+## Contributions Tables
+
+The current version of the Open Discourse database contains two contributions tables. Contributions are any kind of interjections and other types of reactions during a speech from the plenum that is recorded by the stenographers. There is a simplified version of the contributions table and an extended one. The simplified version only contains the raw text of the interjection and two foreign keys to map the contribution to the associated speech and the precise position in the speech where the contribution occurred.
+
+The extended contributions table has more detailed meta information but the instances in this table can be faulty. The logic needs further refinement for better results - still we wanted to provide the current state of this approach and hence we labeled this table as being experimental.
+
+### Contributions Simplified
+
+<details>
+ <summary>Click here for a table preview</summary>
+ 
+::: {.tablebox}
+```{r}
+contributions_simplified %>% 
+  slice(1:10) %>% 
+  make_table(scrollable = TRUE)
+```
+*this preview depicts the first 10 rows of the contributions simplified table.*
+:::
+</details>
+<br>
+
+The simplified contributions table has the following dimensions:
+
+```{r}
+read_csv("../.temp/contributions_simplified_dim.csv") %>% 
+  make_table()
+```
+
+#### Simplified contributions summary table
+
+```{r}
+read_csv("../.temp/contributions_simplified_sum.csv") %>% 
+  make_table()
+```
+
+### Contributions Extended (experimental)
+
+<details>
+ <summary>Click here for a table preview</summary>
+ 
+::: {.tablebox}
+```{r}
+contributions_extended %>% 
+  slice(1:10) %>% 
+  make_table(scrollable = TRUE)
+```
+
+*this preview depicts the first 10 rows of the contributions extended table.*
+:::
+</details>
+<br>
+
+The extended contributions table has the following dimensions:
+
+```{r}
+read_csv("../.temp/contributions_extended_dim.csv") %>% 
+  make_table()
+```
+
+#### Extended contributions summary table
+
+```{r}
+read_csv("../.temp/contributions_extended_sum.csv") %>% 
+  make_table()
+```
+
+#### Additional Remarks
+
+This extended version of the contribution table contains detailed meta information. This table is labeled experimental since the extraction of the meta information is faulty at times. This is caused by in the way of how contributions are recorded throughout the electoral periods.
+
+This extended table also introduces a seven level category system that defines the type of the respective contribution. Following table provides an overview of these seven levels:
+
+**Contribution Types**
+
+| *type*          | Description                                          |
+|:----------------|:-----------------------------------------------------|
+| Beifall         | Applause                                             |
+| Heiterkeit      | Cheerfulness                                         |
+| Lachen          | Laughter                                             |
+| Personen-Einruf | Interjection (by a specific politician)              |
+| Unruhe          | Noisiness/unrest                                     |
+| Widerspruch     | Disagreement                                         |
+| Zuruf           | Interjection - not assigned to a specific politician |
+| Zustimmung      | Agreement                                            |
+
+------------------------------------------------------------------------
+
+## Electoral Terms Table
+
+The electoral terms table provides the date information of the beginning and ending of each electoral term.
+
+<details>
+ <summary>Click here for a table preview</summary>
+ 
+::: {.tablebox}
+```{r}
+electoral_terms %>% 
+  slice(1:10) %>% 
+  make_table(scrollable = TRUE)
+```
+
+*this preview depicts the first 10 rows of the electoral terms table.*
+:::
+</details>
+<br>
+
+
+The electoral terms table has following dimensions:
+
+```{r}
+read_csv("../.temp/electoral_terms_dim.csv") %>% 
+  make_table()
+```
+
+### Electoral Terms summary table
+
+```{r}
+read_csv("../.temp/electoral_terms_sum.csv") %>% 
+  make_table()
+```

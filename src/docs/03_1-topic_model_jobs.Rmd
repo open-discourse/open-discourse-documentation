@@ -1,0 +1,68 @@
+```{r, include=FALSE}
+library(jsonlite)
+jobs <- fromJSON("./data/topics/jobs.json")
+```
+
+## Jobs
+
+The job filter of the topic search tool on the Open Discourse website is based on job groups. The job descriptions are taken from the [Politicians Table]. Since the `profession` does not follow a strict categorical system and hence has many unique values, we applied a grouping logic. We created seven groups in total. Politicians can only be assigned to one single group.
+
+The tables below depict the character strings that need to be present in the job description of a politician to get assigned to the respective group.
+
+When the assignment of a politician to a job group is ambiguous (e.g. multiple job descriptions) the politician is not assigned to any group.
+
+### Recht
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+jobs[1] %>% 
+  as_tibble() %>% 
+  make_table(scrollable = TRUE)
+```
+
+### Wirtschaft
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+jobs[2] %>% 
+  as_tibble() %>% 
+  make_table(scrollable = TRUE)
+```
+
+### Naturwissenschaft
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+jobs[3] %>% 
+  as_tibble() %>% 
+  make_table(scrollable = TRUE)
+```
+
+### Gesellschaftswissenschaft
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+jobs[4] %>% 
+  as_tibble() %>% 
+  make_table(scrollable = TRUE)
+```
+
+### Agrar
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+jobs[5] %>% 
+  as_tibble() %>% 
+  make_table(scrollable = TRUE)
+```
+
+### Journalismus
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+jobs[6] %>% 
+  as_tibble() %>% 
+  make_table(scrollable = TRUE)
+```
+
+### Handwerk
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+jobs[7] %>% 
+  as_tibble() %>% 
+  make_table(scrollable = TRUE)
+```

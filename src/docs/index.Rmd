@@ -1,0 +1,56 @@
+---
+title: "Open Discourse - Documentation"
+author: "Open Discourse Team"
+date: "`r Sys.Date()`"
+site: bookdown::gitbook
+documentclass: book
+link-citations: yes
+description: "This is the official documentation of the Open Discourse project"
+url: https\://opendiscourse.de
+github-repo: open-discourse/open-discourse
+---
+
+```{r, include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r, table print helper, include=FALSE, echo=FALSE}
+
+make_table <- function(x, scrollable = FALSE){
+  if(scrollable == TRUE){
+    x %>%
+      kableExtra::kable(format = "html", booktabs = TRUE) %>%
+      kableExtra::kable_styling(font_size = 12, position = "center") %>%
+      kableExtra::scroll_box(width = "100%", height = "300px")
+  } else{
+    x %>% kableExtra::kable(format = "html", booktabs = TRUE) %>%
+      kableExtra::kable_styling("striped", latex_options = "striped", position = "center") %>%
+      kableExtra::column_spec(1, bold = TRUE)
+  }
+
+}
+```
+
+# Introduction
+
+This is the official documentation space of the [Open Discourse](opendiscourse.de) corpus.
+
+Currently you can find detailed documentation about these topics:
+
+
+-   [Get the Data]
+-   [Data Report of the Database]
+-   [LDA Topic Model]
+
+
+
+------------------------------------------------------------------------
+:::: {.infobox .caution}
+**Citing Open Discourse**
+
+If you want to cite the Open Discourse corpus, please cite the resource by referring to the associated data paper published at the Harvard Dataverse as:
+
+> *Richter, F.; Koch, P.; Franke, O.; Kraus, J.; Kuruc, F.; Thiem, A.; Högerl, J.; Heine, S.; Schöps, K., 2020, "Open Discourse", <https://doi.org/10.7910/DVN/FIKIBO>, Harvard Dataverse*
+::::
+

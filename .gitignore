@@ -1,0 +1,12 @@
+.Rprofile
+.Rproj.user
+*/access_token.txt
+.Rhistory
+*.html
+src/docs/_book/
+src/docs/_bookdown_files
+src/.temp/
+src/docs/demo
+src/docs/_*
+src/docs/rendered*
+src/docs/.temp

@@ -1,0 +1,148 @@
+# Get the Data
+
+There are three ways to retrieve the complete data of the Open Discourse corpus:
+
+-   [Download a data dump]
+
+-   [Run the database locally]
+
+-   [Recreate the database locally]
+
+## Download a data dump
+
+The associated [Harvard Dataverse of Open Discourse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FIKIBO) hosts full exports of the database in four different formats. You can easily download the data in your preferred data format and use it in your projects.
+
+The following data formats are available:
+
+-   CSV/Tab (Universal)
+
+-   Pickle (Python)
+
+-   RDS (R)
+
+-   Feather (R & Python)
+
+The dataverse hosts all database tables in these four formats (see Section \@ref(data-report-of-the-database) for a full documentation on the database tables).
+
+The following widget provides direct access to the data files in the dataverse:
+
+```{=html}
+<script src="https://dataverse.harvard.edu/resources/js/widgets.js?persistentId=doi:10.7910/DVN/FIKIBO&amp;dvUrl=https://dataverse.harvard.edu&amp;widget=iframe&amp;heightPx=500"></script>
+```
+
+
+## Run the database locally
+
+On Github we provide a docker image of the Open Discourse database. You can use this docker image to run the database locally on your machine.
+The docker image contains the latest version of the Postgres database. This section guides you through the steps necessary to run the database on your computer.
+
+### Get and launch the database
+
+**Three steps are necessary to run the database on your machine:**
+
+1.  *Authenticate to GitHub Container Registry*
+
+    At first you need a [GitHub](www.github.com) account and authenticate with a personal access token to the `GitHub Container Registry`. This process just involves some quick steps. [Click here](https://docs.github.com/en/packages/guides/migrating-to-github-container-registry-for-docker-images#authenticating-with-the-container-registry) for a detailed documentation on how to get and use your personal access token. You can follow the three steps described under "Authenticating with the container registry" and you are done.
+
+2.  *Pull the docker container*
+
+    After you are authenticated run the following command from your terminal:
+
+```{bash eval=FALSE, include=TRUE, echo=TRUE}
+    docker pull docker.pkg.github.com/open-discourse/open-discourse/database:latest
+```
+
+3.  *Run the database*
+
+    Finally you just need to start the docker container with the database:
+
+```{bash eval=FALSE, include=TRUE, echo=TRUE}
+    docker run --env POSTGRES_USER=postgres --env POSTGRES_DB=postgres --env POSTGRES_PASSWORD=postgres  -p 5432:5432 -d docker.pkg.github.com/open-discourse/open-discourse/database
+```
+
+The database is running on [localhost:5432](localhost:5432) now. See the table below for details on the environment variables passed on to the `docker run` command.
+
+| variable                | value    |
+|-------------------------|----------|
+| --env POSTGRES_USER     | postgres |
+| --env POSTGRES_DB       | postgres |
+| --env POSTGRES_PASSWORD | postgres |
+
+
+### Use the database
+
+After these steps are done, the database is running locally on port `5432`. You can access the database by using a database tool (e.g. [DBeaver](https://dbeaver.io/)) or by using a   programming language.
+
+Use following credentials to log in to your database:
+
+| variable    | value     |
+|-------------|-----------|
+| db_name     | next      |
+| host_db     | localhost |
+| db_port     | 5432      |
+| db_user     | postgres  |
+| db_password | postgres  |
+
+### Code examples
+
+The following code examples in `Python` and `R` show how to access a locally running Open Discourse database. 
+In both examples the [Speeches Table] is retrieved. 
+
+<details>
+  <summary>Python Code</summary>
+
+```{py eval=FALSE, include=TRUE, echo=TRUE, highlight = TRUE, class.output = "python"}
+import psycopg2
+import pandas as pd
+
+# db_connection -----------------------------------------------------------
+con_details = {
+    "host"      : "localhost",
+    "database"  : "next",
+    "user"      : "postgres",
+    "password"  : "postgres",
+    "port"      : "5432"
+}
+con = psycopg2.connect(**con_details)
+
+# get data tables ---------------------------------------------------------
+speeches = pd.read_sql_query("select * from open_discours.speeches", con)
+```
+</details>
+
+<details>
+  <summary>R Code</summary>
+
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+library("RPostgreSQL")
+
+# db_connection -----------------------------------------------------------
+db <- "next"
+host_db <- "localhost"
+db_port <- "5432"
+db_user <- "postgres"
+db_password <- "postgres"
+con <-
+  dbConnect(
+    RPostgres::Postgres(),
+    dbname = db,
+    host = host_db,
+    port = db_port,
+    user = db_user,
+    password = db_password
+  )
+
+# get data tables ---------------------------------------------------------
+speeches <- dbGetQuery(con,
+                       "SELECT *
+                       FROM open_discourse.speeches;")
+```
+</details>
+
+
+
+## Recreate the database locally
+
+You can checkout our GitHub repository and recreate the database from scratch on your local machine or any other instance you want to run the database on. This procedure is the most time consuming way to access the data. The recreation of the database from scratch includes downloading all raw plenary protocols from the website fo the German Bundestag, the full processing procedure of these files and the creation of the Postgres database.
+
+Please find a documentation on how our repository is structured and how to run it locally in the [README files in our repository](https://github.com/open-discourse/open-discourse).
