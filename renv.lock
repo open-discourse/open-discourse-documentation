@@ -93,6 +93,13 @@
       "Repository": "CRAN",
       "Hash": "8c5e8c58ff4fc8dfc67e24985005159b"
     },
+    "arrow": {
+      "Package": "arrow",
+      "Version": "3.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "41517f74f2e340e7ce736dd9bcfbb360"
+    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.1",
@@ -184,6 +191,13 @@
       "Repository": "CRAN",
       "Hash": "f61dbaec772ccd2e17705c1e872e9e7c"
     },
+    "checkmate": {
+      "Package": "checkmate",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a667800d5f0350371bedeb8b8b950289"
+    },
     "class": {
       "Package": "class",
       "Version": "7.3-17",
@@ -258,6 +272,13 @@
       "RemoteRef": "master",
       "RemoteSha": "dbc3111bd77cd4e26d13849001e6555216dfdab4",
       "Hash": "9f0309ef4b43aa8ef16b2fb7da9e83c5"
+    },
+    "dataverse": {
+      "Package": "dataverse",
+      "Version": "0.3.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8183054979facde6c88015f29c840819"
     },
     "dbplyr": {
       "Package": "dbplyr",

@@ -36,7 +36,6 @@ This table contains the speeches held in the parliament along with meta informat
 ::: {.tablebox}
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 speeches %>%
-  select(-c(firstName, lastName, searchSpeechContent)) %>% 
   filter(electoralTerm == 1) %>% 
   slice(1:10) %>% 
   arrange(id) %>% 

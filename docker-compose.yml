@@ -1,17 +1,6 @@
 version: "3"
 
 services:
-  r:
-    image: r
-    container_name: r-docs
-    build:
-      context: .
-      dockerfile: dockerfile
-    volumes:
-      - ./:/./home/rstudio/r/
-    working_dir: /home/rstudio/r/
-    command: Rscript ./src/run_pipeline.R
-
   database:
     image: docker.pkg.github.com/open-discourse/open-discourse/database
     ports:
@@ -20,3 +9,14 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=postgres
+
+  r:
+    image: r
+    container_name: r-docs
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./:/./home/r
+    working_dir: /home/r
+    command: Rscript ./src/run_pipeline.R

@@ -1,4 +1,5 @@
 #run pipeline
+renv::restore()
 source("src/02-query_data.R")
 source("src/03-create_db_schema.R")
 source("src/04-create_tables.R")
