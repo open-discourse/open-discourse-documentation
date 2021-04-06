@@ -1,0 +1,13 @@
+.Rproj.user
+renv
+.github
+.R*
+_*
+
+
+src/.temp
+src/a*
+src/e*
+src/docs/.temp/
+src/docs/data/
+src/docs/images/
