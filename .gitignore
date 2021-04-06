@@ -5,9 +5,4 @@ renv
 _*
 
 
-src/.temp
-src/a*
-src/e*
-src/docs/.temp/
-src/docs/data/
-src/docs/images/
+src/*
