@@ -24,6 +24,8 @@ speeches <- dbGetQuery(con,
                        FROM open_discourse.speeches;")
 names(speeches) %<>% snakecase::to_lower_camel_case()
 
+last_covered_date <- sort(speeches$date, decreasing = TRUE)[1] #generate var with latest session date
+
 factions <- dbGetQuery(con,
                        "SELECT *
                        FROM open_discourse.factions;")

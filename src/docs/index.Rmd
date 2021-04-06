@@ -34,7 +34,7 @@ make_table <- function(x, scrollable = FALSE){
 
 # Introduction
 
-This is the official documentation space of the [Open Discourse](opendiscourse.de) corpus.
+This is the official documentation space of the [Open Discourse](opendiscourse.de) project.
 
 Currently you can find detailed documentation about these topics:
 
