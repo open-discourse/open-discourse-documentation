@@ -4,5 +4,4 @@ renv
 .R*
 _*
 
-
-src/*
+/src/
