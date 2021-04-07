@@ -3,7 +3,7 @@ library("magrittr")
 
 # db_connection -----------------------------------------------------------
 db <- "next"
-host_db <- "database"
+host_db <- "database" #localhost when not running in docker
 db_port <- "5432"
 db_user <- "postgres"
 db_password <- "postgres"

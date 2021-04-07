@@ -8,9 +8,9 @@ This data report serves the purpose of documenting the variables and their linka
 
 The Open Discourse Corpus consists of five main tables. This report provides information about the contents of these tables and the meaning of the respective variables. A detailed documentation about the procedures used to provide this corpus can be found in aforementioned data paper soon.
 
-Furthermore the codebase developed and used to create the corpus can be retrieved from [GitHub](https://github.com/open-discourse/open-discourse). This open source codebase can be used to recreate the database from scratch and to contribute to the repository to further improve the quality of the data.
+Furthermore the codebase developed and used to create the corpus can be retrieved from [GitHub](https://github.com/open-discourse/open-discourse){target="_blank"}. This open source codebase can be used to recreate the database from scratch and to contribute to the repository to further improve the quality of the data.
 
-A current data dump can be found at the associated [Dataverse](https://dataverse.harvard.edu/dataverse/opendiscourse). Also, a full text search engine for researching the corpus can be found on the [Open Discourse Website](www.opendiscourse.de) (currently only available in German).
+A current data dump can be found at the associated [Dataverse](https://dataverse.harvard.edu/dataverse/opendiscourse){target="_blank"}. Also, a full text search engine for researching the corpus can be found on the [Open Discourse Website](https://opendiscourse.de){target="_blank"} (currently only available in German).
 
 
 ## Database Schema
@@ -135,7 +135,7 @@ read_csv("../.temp/factions_sum.csv") %>%
 
 ### Additional Remarks
 
-All factions are drawn from the base data of the MPs ([Stammdaten aller Abgeordneten seit 1949](https://www.bundestag.de/services/opendata)). Additionally, every faction that is mentioned in the protocols but was not present in the base data of the MPs is added. Since we do not only include factions that appear in the protocols, some of the faction IDs in the factions table never occur in the speeches table.
+All factions are drawn from the base data of the MPs ([Stammdaten aller Abgeordneten seit 1949](https://www.bundestag.de/services/opendata){target="_blank"}). Additionally, every faction that is mentioned in the protocols but was not present in the base data of the MPs is added. Since we do not only include factions that appear in the protocols, some of the faction IDs in the factions table never occur in the speeches table.
 
 ------------------------------------------------------------------------
 
@@ -174,7 +174,15 @@ read_csv("../.temp/pol_sum.csv") %>%
 
 ### Additional Remarks
 
-All meta information about the politicians is directly drawn from the base data of the MPs. The Open Discourse corpus only contains a selection of the publicly available personal details of the politicians. A comprehensive resource of the available meta data can be found on the [website of the Bundestag](https://www.bundestag.de/services/opendata). There are some rare cases in which people were members of the government but never held a mandate as a member of the parliament. These politicians are not covered in the base data mentioned above. To fill this gap in the base data, we merge the file with data retrieved from [Wikipedia](https://de.wikipedia.org/wiki/Liste_der_deutschen_Regierungsmitglieder_seit_1949).
+All meta information about the politicians is directly drawn from the base data of the MPs. The Open Discourse corpus only contains a selection of the publicly available personal details of the politicians. A comprehensive resource of the available meta data can be found on the [website of the Bundestag](https://www.bundestag.de/services/opendata){target="_blank"}. There are some rare cases in which people were members of the government but never held a mandate as a member of the parliament. These politicians are not covered in the base data mentioned above. To fill this gap in the base data, we merge the file with data retrieved from [Wikipedia](https://de.wikipedia.org/wiki/Liste_der_deutschen_Regierungsmitglieder_seit_1949){target="_blank"}.
+
+::: {.infobox .caution}
+**NOTICE!**
+
+Genders in the Open Discourse database are based on the information drawn from the meta data mentioned above. At the time being this data source only distinguishes between female and male and hence the Open Discourse data also follows this binary gender system. 
+
+An exception to this binary classification are the politicians retrieved from Wikipedia. The Open Discourse data does not have any information about their gender.
+:::
 
 ------------------------------------------------------------------------
 

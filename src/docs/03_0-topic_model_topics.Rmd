@@ -1,7 +1,7 @@
 # LDA Topic Model 
 
-This section provides additional information about the LDA topic model search tool on the [Open Discourse website](opendiscourse.de). 
-Currently this section is only available in English. 
+This section provides additional information about the LDA topic model search tool on the [Open Discourse website](https://opendiscourse.de){target="_blank"}. 
+
 
 ## Topics Documentation
 

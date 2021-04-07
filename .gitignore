@@ -10,3 +10,4 @@ src/docs/demo
 src/docs/_*
 src/docs/rendered*
 src/docs/.temp
+docs/
