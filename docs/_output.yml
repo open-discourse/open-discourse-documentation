@@ -1,0 +1,14 @@
+bookdown::gitbook:
+  highlight: pygments
+  css: style.css
+  split_by: section
+  config:
+    toc:
+      before: |
+        <li>Documentation<br>
+        Based on Database v1.0.0.</li>
+      after: |
+    fontsettings: no
+    download: no
+    sharing: no
+    info: no
