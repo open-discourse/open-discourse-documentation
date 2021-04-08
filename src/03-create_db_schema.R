@@ -16,4 +16,4 @@ graph <- dm_create_graph(dm_od,
                          rankdir = "LR",
                          columnArrows = TRUE)
 dm_export_graph(graph,
-                file_name = "./src/.temp/db_schema.png")
+                file_name = "docs/images/db_schema.png")
