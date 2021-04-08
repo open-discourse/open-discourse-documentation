@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Open Discourse - Documentation</title>
+  <meta name="description" content="This is the official documentation of the Open Discourse project" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Open Discourse - Documentation" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://opendiscourse.de" />
+  
+  <meta property="og:description" content="This is the official documentation of the Open Discourse project" />
+  <meta name="github-repo" content="open-discourse/open-discourse" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Open Discourse - Documentation" />
+  
+  <meta name="twitter:description" content="This is the official documentation of the Open Discourse project" />
+  
+
+<meta name="author" content="Open Discourse Team" />
+
+
+<meta name="date" content="2021-04-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="get-the-data.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li>Documentation<br>
+Based on Database `r paste0("v.", current_version_tag)`</li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="get-the-data.html"><a href="get-the-data.html"><i class="fa fa-check"></i><b>2</b> Get the Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="download-a-data-dump.html"><a href="download-a-data-dump.html"><i class="fa fa-check"></i><b>2.1</b> Download a data dump</a></li>
+<li class="chapter" data-level="2.2" data-path="run-the-database-locally.html"><a href="run-the-database-locally.html"><i class="fa fa-check"></i><b>2.2</b> Run the database locally</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="run-the-database-locally.html"><a href="run-the-database-locally.html#get-and-launch-the-database"><i class="fa fa-check"></i><b>2.2.1</b> Get and launch the database</a></li>
+<li class="chapter" data-level="2.2.2" data-path="run-the-database-locally.html"><a href="run-the-database-locally.html#use-the-database"><i class="fa fa-check"></i><b>2.2.2</b> Use the database</a></li>
+<li class="chapter" data-level="2.2.3" data-path="run-the-database-locally.html"><a href="run-the-database-locally.html#code-examples"><i class="fa fa-check"></i><b>2.2.3</b> Code examples</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="recreate-the-database-locally.html"><a href="recreate-the-database-locally.html"><i class="fa fa-check"></i><b>2.3</b> Recreate the database locally</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-report-of-the-database.html"><a href="data-report-of-the-database.html"><i class="fa fa-check"></i><b>3</b> Data Report of the Database</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="database-schema.html"><a href="database-schema.html"><i class="fa fa-check"></i><b>3.1</b> Database Schema</a></li>
+<li class="chapter" data-level="3.2" data-path="speeches-table.html"><a href="speeches-table.html"><i class="fa fa-check"></i><b>3.2</b> Speeches Table</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="speeches-table.html"><a href="speeches-table.html#speeches-summary-table"><i class="fa fa-check"></i><b>3.2.1</b> Speeches summary table</a></li>
+<li class="chapter" data-level="3.2.2" data-path="speeches-table.html"><a href="speeches-table.html#additional-remarks"><i class="fa fa-check"></i><b>3.2.2</b> Additional Remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="factions-table.html"><a href="factions-table.html"><i class="fa fa-check"></i><b>3.3</b> Factions Table</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="factions-table.html"><a href="factions-table.html#factions-summary-table"><i class="fa fa-check"></i><b>3.3.1</b> Factions summary table</a></li>
+<li class="chapter" data-level="3.3.2" data-path="factions-table.html"><a href="factions-table.html#additional-remarks-1"><i class="fa fa-check"></i><b>3.3.2</b> Additional Remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="politicians-table.html"><a href="politicians-table.html"><i class="fa fa-check"></i><b>3.4</b> Politicians Table</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="politicians-table.html"><a href="politicians-table.html#politicians-summary-table"><i class="fa fa-check"></i><b>3.4.1</b> Politicians summary table</a></li>
+<li class="chapter" data-level="3.4.2" data-path="politicians-table.html"><a href="politicians-table.html#additional-remarks-2"><i class="fa fa-check"></i><b>3.4.2</b> Additional Remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="contributions-tables.html"><a href="contributions-tables.html"><i class="fa fa-check"></i><b>3.5</b> Contributions Tables</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="contributions-tables.html"><a href="contributions-tables.html#contributions-simplified"><i class="fa fa-check"></i><b>3.5.1</b> Contributions Simplified</a></li>
+<li class="chapter" data-level="3.5.2" data-path="contributions-tables.html"><a href="contributions-tables.html#contributions-extended-experimental"><i class="fa fa-check"></i><b>3.5.2</b> Contributions Extended (experimental)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="electoral-terms-table.html"><a href="electoral-terms-table.html"><i class="fa fa-check"></i><b>3.6</b> Electoral Terms Table</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="electoral-terms-table.html"><a href="electoral-terms-table.html#electoral-terms-summary-table"><i class="fa fa-check"></i><b>3.6.1</b> Electoral Terms summary table</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lda-topic-model.html"><a href="lda-topic-model.html"><i class="fa fa-check"></i><b>4</b> LDA Topic Model</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="topics-documentation.html"><a href="topics-documentation.html"><i class="fa fa-check"></i><b>4.1</b> Topics Documentation</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="topics-documentation.html"><a href="topics-documentation.html#volkswirtschaft"><i class="fa fa-check"></i><b>4.1.1</b> Volkswirtschaft</a></li>
+<li class="chapter" data-level="4.1.2" data-path="topics-documentation.html"><a href="topics-documentation.html#bürgerinnenrechte"><i class="fa fa-check"></i><b>4.1.2</b> Bürger:innenrechte</a></li>
+<li class="chapter" data-level="4.1.3" data-path="topics-documentation.html"><a href="topics-documentation.html#gesundheitswesen"><i class="fa fa-check"></i><b>4.1.3</b> Gesundheitswesen</a></li>
+<li class="chapter" data-level="4.1.4" data-path="topics-documentation.html"><a href="topics-documentation.html#landwirtschaft"><i class="fa fa-check"></i><b>4.1.4</b> Landwirtschaft</a></li>
+<li class="chapter" data-level="4.1.5" data-path="topics-documentation.html"><a href="topics-documentation.html#arbeit"><i class="fa fa-check"></i><b>4.1.5</b> Arbeit</a></li>
+<li class="chapter" data-level="4.1.6" data-path="topics-documentation.html"><a href="topics-documentation.html#bildung"><i class="fa fa-check"></i><b>4.1.6</b> Bildung</a></li>
+<li class="chapter" data-level="4.1.7" data-path="topics-documentation.html"><a href="topics-documentation.html#umwelt"><i class="fa fa-check"></i><b>4.1.7</b> Umwelt</a></li>
+<li class="chapter" data-level="4.1.8" data-path="topics-documentation.html"><a href="topics-documentation.html#energie"><i class="fa fa-check"></i><b>4.1.8</b> Energie</a></li>
+<li class="chapter" data-level="4.1.9" data-path="topics-documentation.html"><a href="topics-documentation.html#transport"><i class="fa fa-check"></i><b>4.1.9</b> Transport</a></li>
+<li class="chapter" data-level="4.1.10" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalität"><i class="fa fa-check"></i><b>4.1.10</b> Recht &amp; Kriminalität</a></li>
+<li class="chapter" data-level="4.1.11" data-path="topics-documentation.html"><a href="topics-documentation.html#sozialpolitik"><i class="fa fa-check"></i><b>4.1.11</b> Sozialpolitik</a></li>
+<li class="chapter" data-level="4.1.12" data-path="topics-documentation.html"><a href="topics-documentation.html#wohnungswesen"><i class="fa fa-check"></i><b>4.1.12</b> Wohnungswesen</a></li>
+<li class="chapter" data-level="4.1.13" data-path="topics-documentation.html"><a href="topics-documentation.html#binnenhandel"><i class="fa fa-check"></i><b>4.1.13</b> Binnenhandel</a></li>
+<li class="chapter" data-level="4.1.14" data-path="topics-documentation.html"><a href="topics-documentation.html#verteidigungspolitik"><i class="fa fa-check"></i><b>4.1.14</b> Verteidigungspolitik</a></li>
+<li class="chapter" data-level="4.1.15" data-path="topics-documentation.html"><a href="topics-documentation.html#technologie"><i class="fa fa-check"></i><b>4.1.15</b> Technologie</a></li>
+<li class="chapter" data-level="4.1.16" data-path="topics-documentation.html"><a href="topics-documentation.html#außenhandel"><i class="fa fa-check"></i><b>4.1.16</b> Außenhandel</a></li>
+<li class="chapter" data-level="4.1.17" data-path="topics-documentation.html"><a href="topics-documentation.html#außenpolitik"><i class="fa fa-check"></i><b>4.1.17</b> Außenpolitik</a></li>
+<li class="chapter" data-level="4.1.18" data-path="topics-documentation.html"><a href="topics-documentation.html#öffentliche-verwaltung"><i class="fa fa-check"></i><b>4.1.18</b> Öffentliche Verwaltung</a></li>
+<li class="chapter" data-level="4.1.19" data-path="topics-documentation.html"><a href="topics-documentation.html#sport"><i class="fa fa-check"></i><b>4.1.19</b> Sport</a></li>
+<li class="chapter" data-level="4.1.20" data-path="topics-documentation.html"><a href="topics-documentation.html#wiedervereinigung"><i class="fa fa-check"></i><b>4.1.20</b> Wiedervereinigung</a></li>
+<li class="chapter" data-level="4.1.21" data-path="topics-documentation.html"><a href="topics-documentation.html#volkswirtschaft-steuern"><i class="fa fa-check"></i><b>4.1.21</b> Volkswirtschaft: Steuern</a></li>
+<li class="chapter" data-level="4.1.22" data-path="topics-documentation.html"><a href="topics-documentation.html#volkswirtschaft-haushalt"><i class="fa fa-check"></i><b>4.1.22</b> Volkswirtschaft: Haushalt</a></li>
+<li class="chapter" data-level="4.1.23" data-path="topics-documentation.html"><a href="topics-documentation.html#bürgerinnenrechte-gleichstellung"><i class="fa fa-check"></i><b>4.1.23</b> Bürger:innenrechte: Gleichstellung</a></li>
+<li class="chapter" data-level="4.1.24" data-path="topics-documentation.html"><a href="topics-documentation.html#bürgerinnenrechte-datenschutz"><i class="fa fa-check"></i><b>4.1.24</b> Bürger:innenrechte: Datenschutz</a></li>
+<li class="chapter" data-level="4.1.25" data-path="topics-documentation.html"><a href="topics-documentation.html#bürgerinnenrechte-flucht-asyl-einbürgerung"><i class="fa fa-check"></i><b>4.1.25</b> Bürger:innenrechte: Flucht, Asyl &amp; Einbürgerung</a></li>
+<li class="chapter" data-level="4.1.26" data-path="topics-documentation.html"><a href="topics-documentation.html#gesundheitswesen-covid19"><i class="fa fa-check"></i><b>4.1.26</b> Gesundheitswesen: Covid19</a></li>
+<li class="chapter" data-level="4.1.27" data-path="topics-documentation.html"><a href="topics-documentation.html#landwirtschaft-nahrungsmittel"><i class="fa fa-check"></i><b>4.1.27</b> Landwirtschaft: Nahrungsmittel</a></li>
+<li class="chapter" data-level="4.1.28" data-path="topics-documentation.html"><a href="topics-documentation.html#landwirtschaft-tierschutz"><i class="fa fa-check"></i><b>4.1.28</b> Landwirtschaft: Tierschutz</a></li>
+<li class="chapter" data-level="4.1.29" data-path="topics-documentation.html"><a href="topics-documentation.html#arbeit-arbeitnehmerinnenrechte"><i class="fa fa-check"></i><b>4.1.29</b> Arbeit: Arbeitnehmer:innenrechte</a></li>
+<li class="chapter" data-level="4.1.30" data-path="topics-documentation.html"><a href="topics-documentation.html#arbeit-mindestlohn"><i class="fa fa-check"></i><b>4.1.30</b> Arbeit: Mindestlohn</a></li>
+<li class="chapter" data-level="4.1.31" data-path="topics-documentation.html"><a href="topics-documentation.html#arbeit-leih--zeitarbeit"><i class="fa fa-check"></i><b>4.1.31</b> Arbeit: Leih- &amp; Zeitarbeit</a></li>
+<li class="chapter" data-level="4.1.32" data-path="topics-documentation.html"><a href="topics-documentation.html#bildung-hochschule-universität"><i class="fa fa-check"></i><b>4.1.32</b> Bildung: Hochschule &amp; Universität</a></li>
+<li class="chapter" data-level="4.1.33" data-path="topics-documentation.html"><a href="topics-documentation.html#bildung-schule"><i class="fa fa-check"></i><b>4.1.33</b> Bildung: Schule</a></li>
+<li class="chapter" data-level="4.1.34" data-path="topics-documentation.html"><a href="topics-documentation.html#bildung-berufliche-ausbildung"><i class="fa fa-check"></i><b>4.1.34</b> Bildung: Berufliche Ausbildung</a></li>
+<li class="chapter" data-level="4.1.35" data-path="topics-documentation.html"><a href="topics-documentation.html#bildung-forschung"><i class="fa fa-check"></i><b>4.1.35</b> Bildung: Forschung</a></li>
+<li class="chapter" data-level="4.1.36" data-path="topics-documentation.html"><a href="topics-documentation.html#umwelt-atommüll-chemische-giftstoff"><i class="fa fa-check"></i><b>4.1.36</b> Umwelt: Atommüll &amp; Chemische Giftstoff</a></li>
+<li class="chapter" data-level="4.1.37" data-path="topics-documentation.html"><a href="topics-documentation.html#umwelt-dieselskandal"><i class="fa fa-check"></i><b>4.1.37</b> Umwelt: Dieselskandal</a></li>
+<li class="chapter" data-level="4.1.38" data-path="topics-documentation.html"><a href="topics-documentation.html#umwelt-klima--umweltschutz"><i class="fa fa-check"></i><b>4.1.38</b> Umwelt: Klima- &amp; Umweltschutz</a></li>
+<li class="chapter" data-level="4.1.39" data-path="topics-documentation.html"><a href="topics-documentation.html#energie-kernenergie"><i class="fa fa-check"></i><b>4.1.39</b> Energie: Kernenergie</a></li>
+<li class="chapter" data-level="4.1.40" data-path="topics-documentation.html"><a href="topics-documentation.html#energie-fossile-energie"><i class="fa fa-check"></i><b>4.1.40</b> Energie: Fossile Energie</a></li>
+<li class="chapter" data-level="4.1.41" data-path="topics-documentation.html"><a href="topics-documentation.html#energie-erneuerbare-energie"><i class="fa fa-check"></i><b>4.1.41</b> Energie: Erneuerbare Energie</a></li>
+<li class="chapter" data-level="4.1.42" data-path="topics-documentation.html"><a href="topics-documentation.html#transport-automobil-straßenverkehr"><i class="fa fa-check"></i><b>4.1.42</b> Transport: Automobil &amp; Straßenverkehr</a></li>
+<li class="chapter" data-level="4.1.43" data-path="topics-documentation.html"><a href="topics-documentation.html#transport-flug"><i class="fa fa-check"></i><b>4.1.43</b> Transport: Flug</a></li>
+<li class="chapter" data-level="4.1.44" data-path="topics-documentation.html"><a href="topics-documentation.html#transport-bahn"><i class="fa fa-check"></i><b>4.1.44</b> Transport: Bahn</a></li>
+<li class="chapter" data-level="4.1.45" data-path="topics-documentation.html"><a href="topics-documentation.html#transport-schifffahrt"><i class="fa fa-check"></i><b>4.1.45</b> Transport: Schifffahrt</a></li>
+<li class="chapter" data-level="4.1.46" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalitä-polizei-grenzschutz"><i class="fa fa-check"></i><b>4.1.46</b> Recht &amp; Kriminalitä: Polizei &amp; Grenzschutz</a></li>
+<li class="chapter" data-level="4.1.47" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalität-drogenpolitik"><i class="fa fa-check"></i><b>4.1.47</b> Recht &amp; Kriminalität: Drogenpolitik</a></li>
+<li class="chapter" data-level="4.1.48" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalität-familienangelegenheiten"><i class="fa fa-check"></i><b>4.1.48</b> Recht &amp; Kriminalität: Familienangelegenheiten</a></li>
+<li class="chapter" data-level="4.1.49" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalität-zivil-und-strafrecht"><i class="fa fa-check"></i><b>4.1.49</b> Recht &amp; Kriminalität: Zivil und Strafrecht</a></li>
+<li class="chapter" data-level="4.1.50" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalität-sexualstrafrecht"><i class="fa fa-check"></i><b>4.1.50</b> Recht &amp; Kriminalität: Sexualstrafrecht</a></li>
+<li class="chapter" data-level="4.1.51" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalität-innerdeutscher-terrorismus"><i class="fa fa-check"></i><b>4.1.51</b> Recht &amp; Kriminalität: Innerdeutscher Terrorismus</a></li>
+<li class="chapter" data-level="4.1.52" data-path="topics-documentation.html"><a href="topics-documentation.html#recht-kriminalität-wirtschaftskriminalität"><i class="fa fa-check"></i><b>4.1.52</b> Recht &amp; Kriminalität: Wirtschaftskriminalität</a></li>
+<li class="chapter" data-level="4.1.53" data-path="topics-documentation.html"><a href="topics-documentation.html#sozialpolitik-renten"><i class="fa fa-check"></i><b>4.1.53</b> Sozialpolitik: Renten</a></li>
+<li class="chapter" data-level="4.1.54" data-path="topics-documentation.html"><a href="topics-documentation.html#sozialpolitik-geringverdiener"><i class="fa fa-check"></i><b>4.1.54</b> Sozialpolitik: Geringverdiener</a></li>
+<li class="chapter" data-level="4.1.55" data-path="topics-documentation.html"><a href="topics-documentation.html#sozialpolitik-kinder-jugenhilfe"><i class="fa fa-check"></i><b>4.1.55</b> Sozialpolitik: Kinder &amp; Jugenhilfe</a></li>
+<li class="chapter" data-level="4.1.56" data-path="topics-documentation.html"><a href="topics-documentation.html#sozialpolitik-bürgerinnenversicherunng"><i class="fa fa-check"></i><b>4.1.56</b> Sozialpolitik: Bürger:innenversicherunng</a></li>
+<li class="chapter" data-level="4.1.57" data-path="topics-documentation.html"><a href="topics-documentation.html#binnenhandel-verbraucherschutz"><i class="fa fa-check"></i><b>4.1.57</b> Binnenhandel: Verbraucherschutz</a></li>
+<li class="chapter" data-level="4.1.58" data-path="topics-documentation.html"><a href="topics-documentation.html#binnenhandel-mittelstand"><i class="fa fa-check"></i><b>4.1.58</b> Binnenhandel: Mittelstand</a></li>
+<li class="chapter" data-level="4.1.59" data-path="topics-documentation.html"><a href="topics-documentation.html#verteidigungspolitik-nachkriegsordnung"><i class="fa fa-check"></i><b>4.1.59</b> Verteidigungspolitik: Nachkriegsordnung</a></li>
+<li class="chapter" data-level="4.1.60" data-path="topics-documentation.html"><a href="topics-documentation.html#verteidigungspolitik-rüstungskontrolle"><i class="fa fa-check"></i><b>4.1.60</b> Verteidigungspolitik: Rüstungskontrolle</a></li>
+<li class="chapter" data-level="4.1.61" data-path="topics-documentation.html"><a href="topics-documentation.html#verteidigungspolitik-militärische-unterstützung-und-waffenlieferung"><i class="fa fa-check"></i><b>4.1.61</b> Verteidigungspolitik: Militärische Unterstützung und Waffenlieferung</a></li>
+<li class="chapter" data-level="4.1.62" data-path="topics-documentation.html"><a href="topics-documentation.html#technologie-digitalisierung"><i class="fa fa-check"></i><b>4.1.62</b> Technologie: Digitalisierung</a></li>
+<li class="chapter" data-level="4.1.63" data-path="topics-documentation.html"><a href="topics-documentation.html#technologie-rundfunk"><i class="fa fa-check"></i><b>4.1.63</b> Technologie: Rundfunk</a></li>
+<li class="chapter" data-level="4.1.64" data-path="topics-documentation.html"><a href="topics-documentation.html#außenhandel-globalisierung-weltwirtschaft"><i class="fa fa-check"></i><b>4.1.64</b> Außenhandel: Globalisierung &amp; Weltwirtschaft</a></li>
+<li class="chapter" data-level="4.1.65" data-path="topics-documentation.html"><a href="topics-documentation.html#außenhandel-handelsabkommen"><i class="fa fa-check"></i><b>4.1.65</b> Außenhandel: Handelsabkommen</a></li>
+<li class="chapter" data-level="4.1.66" data-path="topics-documentation.html"><a href="topics-documentation.html#außenpolitik-entwicklungspolitik"><i class="fa fa-check"></i><b>4.1.66</b> Außenpolitik: Entwicklungspolitik</a></li>
+<li class="chapter" data-level="4.1.67" data-path="topics-documentation.html"><a href="topics-documentation.html#außenpolitik-europa"><i class="fa fa-check"></i><b>4.1.67</b> Außenpolitik: Europa</a></li>
+<li class="chapter" data-level="4.1.68" data-path="topics-documentation.html"><a href="topics-documentation.html#außenpolitik-naher-osten"><i class="fa fa-check"></i><b>4.1.68</b> Außenpolitik: Naher Osten</a></li>
+<li class="chapter" data-level="4.1.69" data-path="topics-documentation.html"><a href="topics-documentation.html#außenpolitik-ost-west-konflikt"><i class="fa fa-check"></i><b>4.1.69</b> Außenpolitik: Ost-West Konflikt</a></li>
+<li class="chapter" data-level="4.1.70" data-path="topics-documentation.html"><a href="topics-documentation.html#öffentliche-verwaltun-föderalismus"><i class="fa fa-check"></i><b>4.1.70</b> Öffentliche Verwaltun: Föderalismus</a></li>
+<li class="chapter" data-level="4.1.71" data-path="topics-documentation.html"><a href="topics-documentation.html#öffentliche-verwaltun-post"><i class="fa fa-check"></i><b>4.1.71</b> Öffentliche Verwaltun: Post</a></li>
+<li class="chapter" data-level="4.1.72" data-path="topics-documentation.html"><a href="topics-documentation.html#öffentliche-verwaltun-soziale-leistungen-für-angestellte-im-öffentlichen-dienst"><i class="fa fa-check"></i><b>4.1.72</b> Öffentliche Verwaltun: Soziale Leistungen für Angestellte im öffentlichen Dienst</a></li>
+<li class="chapter" data-level="4.1.73" data-path="topics-documentation.html"><a href="topics-documentation.html#öffentliche-verwaltun-korruption-lobbyismus"><i class="fa fa-check"></i><b>4.1.73</b> Öffentliche Verwaltun: Korruption &amp; Lobbyismus</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="jobs.html"><a href="jobs.html"><i class="fa fa-check"></i><b>4.2</b> Jobs</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="jobs.html"><a href="jobs.html#recht"><i class="fa fa-check"></i><b>4.2.1</b> Recht</a></li>
+<li class="chapter" data-level="4.2.2" data-path="jobs.html"><a href="jobs.html#wirtschaft"><i class="fa fa-check"></i><b>4.2.2</b> Wirtschaft</a></li>
+<li class="chapter" data-level="4.2.3" data-path="jobs.html"><a href="jobs.html#naturwissenschaft"><i class="fa fa-check"></i><b>4.2.3</b> Naturwissenschaft</a></li>
+<li class="chapter" data-level="4.2.4" data-path="jobs.html"><a href="jobs.html#gesellschaftswissenschaft"><i class="fa fa-check"></i><b>4.2.4</b> Gesellschaftswissenschaft</a></li>
+<li class="chapter" data-level="4.2.5" data-path="jobs.html"><a href="jobs.html#agrar"><i class="fa fa-check"></i><b>4.2.5</b> Agrar</a></li>
+<li class="chapter" data-level="4.2.6" data-path="jobs.html"><a href="jobs.html#journalismus"><i class="fa fa-check"></i><b>4.2.6</b> Journalismus</a></li>
+<li class="chapter" data-level="4.2.7" data-path="jobs.html"><a href="jobs.html#handwerk"><i class="fa fa-check"></i><b>4.2.7</b> Handwerk</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="politicians.html"><a href="politicians.html"><i class="fa fa-check"></i><b>4.3</b> Politicians</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Open Discourse - Documentation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Open Discourse - Documentation</h1>
+<p class="author"><em>Open Discourse Team</em></p>
+<p class="date"><em>2021-04-08</em></p>
+</div>
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>This is the official documentation space of the <a href="opendiscourse.de">Open Discourse</a> project.</p>
+<p>Currently you can find detailed documentation about these topics:</p>
+<ul>
+<li><a href="get-the-data.html#get-the-data">Get the Data</a></li>
+<li><a href="data-report-of-the-database.html#data-report-of-the-database">Data Report of the Database</a></li>
+<li><a href="lda-topic-model.html#lda-topic-model">LDA Topic Model</a></li>
+</ul>
+<hr />
+<div class="infobox caution">
+<p><strong>Citing Open Discourse</strong></p>
+<p>If you want to cite the Open Discourse corpus, please cite the resource by referring to the associated data paper published at the Harvard Dataverse as:</p>
+<blockquote>
+<p><em>Richter, F.; Koch, P.; Franke, O.; Kraus, J.; Kuruc, F.; Thiem, A.; Högerl, J.; Heine, S.; Schöps, K., 2020, “Open Discourse”, <a href="https://doi.org/10.7910/DVN/FIKIBO" class="uri">https://doi.org/10.7910/DVN/FIKIBO</a>, Harvard Dataverse</em></p>
+</blockquote>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="get-the-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": false,
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>
