@@ -1,0 +1,16 @@
+## State Affiliation (Wahlbundesland)
+
+The assignment of politicians to their respective state (*Wahlbundesland*) is based on the *Stammdaten* file provided by the [German Bundestag](https://www.bundestag.de/services/opendata){target="_blank"}). 
+
+Currently only location information for politicians with direct mandates were considered. In future updates also politicians with mandates based on state lists (*Landesliste*) will be covered. 
+
+Based on the direct mandate information, the state information for the politicians in the topic model is extrapolated for the electoral terms the respective politician did not have a direct mandate but a state list mandate.
+
+The table below provides a complete overview of the politician and the respective state association per electoral term.
+
+```{r}
+states <- readr::read_csv("./data/constituency_table.csv")
+
+make_table(states, scrollable = TRUE)
+```
+
