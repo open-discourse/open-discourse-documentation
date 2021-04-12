@@ -1,5 +1,5 @@
 ---
-title: "Open Discourse - Documentation"
+title: "Documentation Space - Open Discourse v. `r current_version_tag`"
 author: "Open Discourse Team"
 date: "`r Sys.Date()`"
 site: bookdown::gitbook
@@ -49,7 +49,7 @@ Currently you can find detailed documentation about these topics:
 :::: {.infobox .caution}
 **Citing Open Discourse**
 
-If you want to cite the Open Discourse corpus, please cite the resource by referring to the associated data paper published at the Harvard Dataverse as:
+If you want to cite the Open Discourse corpus, please cite the resource by referring to the respective data version at the Harvard Dataverse:
 
 > *Richter, F.; Koch, P.; Franke, O.; Kraus, J.; Kuruc, F.; Thiem, A.; Högerl, J.; Heine, S.; Schöps, K., 2020, "Open Discourse", <https://doi.org/10.7910/DVN/FIKIBO>, Harvard Dataverse*
 ::::

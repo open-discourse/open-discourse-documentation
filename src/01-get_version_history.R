@@ -1,5 +1,6 @@
 library(httr)
 
+
 github_api <- function(path) {
   url <- modify_url("https://api.github.com", path = path)
   resp <- GET(url)
@@ -9,7 +10,7 @@ github_api <- function(path) {
 resp <- github_api("/repos/open-discourse/open-discourse/releases")
 
 current_version_tag <- resp[[1]]$tag_name
-current_version_date <- str_extract(resp[[1]][["published_at"]], pattern = "^[^T]*")
+current_version_date <- stringr::str_extract(resp[[1]][["published_at"]], pattern = "^[^T]*")
 
 
 #create target folder if not available

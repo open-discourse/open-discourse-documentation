@@ -22,7 +22,9 @@ con <-
 speeches <- dbGetQuery(con,
                        "SELECT *
                        FROM open_discourse.speeches;")
+
 names(speeches) %<>% snakecase::to_lower_camel_case()
+speeches$searchSpeechContent <- NULL #delete search index infos of full text search 
 
 last_covered_date <- sort(speeches$date, decreasing = TRUE)[1] #generate var with latest session date
 
