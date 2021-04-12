@@ -1,11 +1,11 @@
 ---
-title: "Documentation Space - Open Discourse v. `r current_version_tag`"
+title: "Documentation Space - Open Discourse v. `r paste(current_version_tag)`"
 author: "Open Discourse Team"
 date: "`r Sys.Date()`"
 site: bookdown::gitbook
 documentclass: book
 link-citations: yes
-description: "This is the official documentation of the Open Discourse project"
+description: This is the official documentation of the Open Discourse project
 url: https\://opendiscourse.de
 github-repo: open-discourse/open-discourse
 ---
@@ -49,8 +49,9 @@ Currently you can find detailed documentation about these topics:
 :::: {.infobox .caution}
 **Citing Open Discourse**
 
-If you want to cite the Open Discourse corpus, please cite the resource by referring to the respective data version at the Harvard Dataverse:
+If you want to cite the Open Discourse corpus, please cite the resource as follows:
 
-> *Richter, F.; Koch, P.; Franke, O.; Kraus, J.; Kuruc, F.; Thiem, A.; Högerl, J.; Heine, S.; Schöps, K., 2020, "Open Discourse", <https://doi.org/10.7910/DVN/FIKIBO>, Harvard Dataverse*
+> `r sprintf("Richter, F.; Koch, P.; Franke, O.; Kraus, J.; Kuruc, F.; Thiem, A.; Högerl, J.; Heine, S.; Schöps, K. (2020). Open Discourse. <https://doi.org/10.7910/DVN/FIKIBO>. Harvard Dataverse. V%s.", hdv_version_history[1,'v'])`
 ::::
+
 
