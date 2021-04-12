@@ -15,8 +15,8 @@ convert(contributions_extended, output)
 
 # retrieve dataverse dataset info -----------------------------------------
 server <- "dataverse.harvard.edu"
-doi <- "doi:10.7910/DVN/O6QF8H"
-key <- "key"
+doi <- "doi:10.7910/DVN/FIKIBO"
+key <- "7ac02bf7-e2f8-4df2-96ef-2689b9c71e02"
 
 
 dataset_versions <- dataset_versions(dataset = doi, server = server)
@@ -48,6 +48,7 @@ for(i in 1:length(new_files)){
  for (i in 1:nrow(upload_files)) {
    print(paste("updating file", i, "name:", upload_files[i,1]))
    dv_file <- old_files_info[sapply(old_files_info, function(x) sub(".csv", ".tab", upload_files[i,1]) %in% x)]
+   
    update_hvd_dataverse(
      file = paste0(output, upload_files[i,1]),
      dataset = doi,
@@ -57,7 +58,8 @@ for(i in 1:length(new_files)){
      id = flatten(dv_file)$dataFile$id
    )
    if(str_detect(upload_files[i,1], pattern = ".csv")){
-     Sys.sleep(10)  
+     print(paste(Sys.time(), "==== pausing 6 min because of csv processing of harvard dataverse"))
+     Sys.sleep(400)
    }
    
  }

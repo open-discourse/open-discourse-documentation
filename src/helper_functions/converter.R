@@ -4,7 +4,6 @@ library(lubridate)
 
 convert <- function(data, output){
   name  <- deparse(substitute(data))
-  
   if(name == "politicians"){
     data <- data %>% 
       mutate_if(is.Date, ~as.character(.))
