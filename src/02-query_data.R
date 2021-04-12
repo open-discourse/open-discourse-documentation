@@ -17,7 +17,6 @@ con <-
     password = db_password
   )
 
-
 # get data tables ---------------------------------------------------------
 speeches <- dbGetQuery(con,
                        "SELECT *

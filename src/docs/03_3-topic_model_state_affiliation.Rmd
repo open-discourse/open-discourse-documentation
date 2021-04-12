@@ -9,7 +9,7 @@ Based on the direct mandate information, the state information for the politicia
 The table below provides a complete overview of the politician and the respective state association per electoral term.
 
 ```{r}
-states <- readr::read_csv("./data/constituency_table.csv")
+states <- readr::read_csv("./data/state_affiliation_table.csv")
 
 make_table(states, scrollable = TRUE)
 ```

@@ -210,7 +210,3 @@ create_summary(electoral_terms, dimension = TRUE) %>%
 #full summary
 create_summary(electoral_terms, descriptions = descriptions) %>%
   write_csv("./src/.temp/electoral_terms_sum.csv")
-
-
-
-
