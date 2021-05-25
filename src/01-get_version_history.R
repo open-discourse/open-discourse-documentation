@@ -25,8 +25,8 @@ gh_version_history <- gh_version_history %>%
          t = as.Date(t)) %>% 
   arrange(desc(t))
 
-current_version_tag <- gh_version_history[[1]]
-current_version_date <- gh_version_history[[2]]
+current_version_tag <- gh_version_history[[1]][[1]]
+current_version_date <- gh_version_history[[2]][[1]]
 
 #create target folder if not available
 ifelse(!dir.exists(paste0("docs/", current_version_tag)), 
