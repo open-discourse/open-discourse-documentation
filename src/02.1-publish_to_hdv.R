@@ -16,7 +16,7 @@ convert(contributions_extended, output)
 # retrieve dataverse dataset info -----------------------------------------
 server <- "dataverse.harvard.edu"
 doi <- "doi:10.7910/DVN/FIKIBO"
-key <- "7ac02bf7-e2f8-4df2-96ef-2689b9c71e02"
+key <- Sys.getenv("HARVARD_DATAVERSE")
 
 
 dataset_versions <- dataset_versions(dataset = doi, server = server)
@@ -55,11 +55,11 @@ for(i in 1:length(new_files)){
      server = server,
      directoryLabel = str_extract(pattern = "[^.]*$", upload_files[i,1]),
      key = key,
-     id = flatten(dv_file)$dataFile$id
+     id = dv_file[[1]]$dataFile$id
    )
    if(str_detect(upload_files[i,1], pattern = ".csv")){
      print(paste(Sys.time(), "==== pausing 6 min because of csv processing of harvard dataverse"))
-     Sys.sleep(400)
+     Sys.sleep(370)
    }
    
  }
@@ -72,4 +72,6 @@ publish_dataset(dataset = doi,
                  key = key,
                  server = server)
 
+
+dv_file <- old_files_info[21]
 

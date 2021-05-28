@@ -39,7 +39,7 @@ doi <- "doi:10.7910/DVN/FIKIBO"
 
 od_versions <- dataset_versions(dataset = doi, 
                                 server = server, 
-                                key = key)
+                                key = Sys.getenv("HARVARD_DATAVERSE"))
 
 hdv_version_history <- tibble::tibble()
 for(i in 1:length(od_versions)){
