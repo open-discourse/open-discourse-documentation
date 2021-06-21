@@ -38,20 +38,25 @@ This is the official documentation space of the [Open Discourse](opendiscourse.d
 
 Currently you can find detailed documentation about these topics:
 
-
 -   [Get the Data]
+
 -   [Data Report of the Database]
+
 -   [LDA Topic Model]
 
-
-
 ------------------------------------------------------------------------
-:::: {.infobox .caution}
+
+**Current State of Open Discourse:**
+
+The latest session covered in the current database version took place at `r max(speeches$date)`. 
+Please note that GitHub and Harvard Dataverse use different versioning schemes. Therefore the version numbers of the Open Discourse database differ between the two platforms. 
+
+The latest GitHub version number of Open Discourse is  `r gh_version_history[1,1]` and was created on `r gh_version_history[1,2]`. This GitHub version corresponds with the latest Harvard Dataverse version number `r hdv_version_history[1,1]` created on `r hdv_version_history[1,2]`
+
+::: {.infobox .caution}
 **Citing Open Discourse**
 
 If you want to cite the Open Discourse corpus, please cite the resource as follows:
 
 > `r sprintf("Richter, F.; Koch, P.; Franke, O.; Kraus, J.; Kuruc, F.; Thiem, A.; Högerl, J.; Heine, S.; Schöps, K. (2020). Open Discourse. <https://doi.org/10.7910/DVN/FIKIBO>. Harvard Dataverse. V%s.", hdv_version_history[1,'v'])`
-::::
-
-
+:::
