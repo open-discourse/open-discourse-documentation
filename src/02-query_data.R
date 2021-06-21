@@ -14,7 +14,8 @@ con <-
     host = host_db,
     port = db_port,
     user = db_user,
-    password = db_password
+    password = db_password,
+    bigint = "integer"
   )
 
 # get data tables ---------------------------------------------------------

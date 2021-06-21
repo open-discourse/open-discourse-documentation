@@ -1,4 +1,5 @@
 .Rprofile
+.Renviron
 .Rproj.user
 */access_token.txt
 .Rhistory
