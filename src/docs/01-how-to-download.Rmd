@@ -49,7 +49,7 @@ The docker image contains the latest version of the Postgres database. This sect
     After you are authenticated run the following command from your terminal:
 
 ```{bash eval=FALSE, include=TRUE, echo=TRUE}
-    docker pull docker.pkg.github.com/open-discourse/open-discourse/database:latest
+    docker pull ghcr.io/open-discourse/open-discourse/database:latest
 ```
 
 3.  *Run the database*
@@ -57,7 +57,7 @@ The docker image contains the latest version of the Postgres database. This sect
     Finally you just need to start the docker container with the database:
 
 ```{bash eval=FALSE, include=TRUE, echo=TRUE}
-    docker run --env POSTGRES_USER=postgres --env POSTGRES_DB=postgres --env POSTGRES_PASSWORD=postgres  -p 5432:5432 -d docker.pkg.github.com/open-discourse/open-discourse/database
+    docker run --env POSTGRES_USER=postgres --env POSTGRES_DB=postgres --env POSTGRES_PASSWORD=postgres  -p 5432:5432 -d ghcr.io/open-discourse/open-discourse/database
 ```
 
 The database is running on [localhost:5432](localhost:5432) now. See the table below for details on the environment variables passed on to the `docker run` command.
@@ -106,7 +106,7 @@ con_details = {
 con = psycopg2.connect(**con_details)
 
 # get data tables ---------------------------------------------------------
-speeches = pd.read_sql_query("select * from open_discours.speeches", con)
+speeches = pd.read_sql_query("select * from open_discourse.speeches", con)
 ```
 </details>
 

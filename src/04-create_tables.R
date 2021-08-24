@@ -89,7 +89,7 @@ speechId_desc <- c("Foreign key of the speech. This ID can be used to link the o
 # firstName, lastName & searchSpeechContent
 
 speeches <- speeches %>%
-  select(-c(firstName, lastName, searchSpeechContent))
+  select(-c(firstName, lastName))
 
 descriptions <- tibble(
   id = "Primary Key",
