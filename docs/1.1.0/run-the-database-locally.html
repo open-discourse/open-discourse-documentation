@@ -293,12 +293,12 @@ The docker image contains the latest version of the Postgres database. This sect
 <li><p><em>Pull the docker container</em></p>
 <p>After you are authenticated run the following command from your terminal:</p></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="run-the-database-locally.html#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">docker</span> pull docker.pkg.github.com/open-discourse/open-discourse/database:latest</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="run-the-database-locally.html#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">docker</span> pull ghcr.io/open-discourse/open-discourse/database:latest</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li><p><em>Run the database</em></p>
 <p>Finally you just need to start the docker container with the database:</p></li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="run-the-database-locally.html#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">docker</span> run --env POSTGRES_USER=postgres --env POSTGRES_DB=postgres --env POSTGRES_PASSWORD=postgres  -p 5432:5432 -d docker.pkg.github.com/open-discourse/open-discourse/database</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="run-the-database-locally.html#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">docker</span> run --env POSTGRES_USER=postgres --env POSTGRES_DB=postgres --env POSTGRES_PASSWORD=postgres  -p 5432:5432 -d ghcr.io/open-discourse/open-discourse/database</span></code></pre></div>
 <p>The database is running on <a href="localhost:5432">localhost:5432</a> now. See the table below for details on the environment variables passed on to the <code>docker run</code> command.</p>
 <table>
 <thead>
@@ -380,7 +380,7 @@ Python Code
 <span id="cb3-12"><a href="run-the-database-locally.html#cb3-12" aria-hidden="true" tabindex="-1"></a>con <span class="op">=</span> psycopg2.<span class="ex">connect</span>(<span class="op">**</span>con_details)</span>
 <span id="cb3-13"><a href="run-the-database-locally.html#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-14"><a href="run-the-database-locally.html#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># get data tables ---------------------------------------------------------</span></span>
-<span id="cb3-15"><a href="run-the-database-locally.html#cb3-15" aria-hidden="true" tabindex="-1"></a>speeches <span class="op">=</span> pd.read_sql_query(<span class="st">&quot;select * from open_discours.speeches&quot;</span>, con)</span></code></pre></div>
+<span id="cb3-15"><a href="run-the-database-locally.html#cb3-15" aria-hidden="true" tabindex="-1"></a>speeches <span class="op">=</span> pd.read_sql_query(<span class="st">&quot;select * from open_discourse.speeches&quot;</span>, con)</span></code></pre></div>
 </details>
 <details>
 <summary>
